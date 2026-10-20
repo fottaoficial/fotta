@@ -3,1540 +3,338 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fotta — um instante, para sempre | Fotografia Instantânea</title>
-  <meta name="description" content="A Fotta transforma encontros especiais em fotografias instantâneas físicas em Nova Friburgo - RJ. Praça do Suspiro, Espaço ARP, Country Club e eventos.">
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E3A2F'/%3E%3Crect x='9' y='8' width='30' height='32' rx='2' fill='%23FAFAF7'/%3E%3Crect x='13' y='12' width='22' height='18' rx='1' fill='%231E3A2F'/%3E%3Ccircle cx='24' cy='21' r='4.5' fill='%23F4B942'/%3E%3C/svg%3E">
+  <title>fotta. — um instante, para sempre | Fotografia Instantânea</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23FAF8F2' stroke='%23F5B014' stroke-width='2'/%3E%3Crect x='15' y='16' width='18' height='16' rx='4' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23F5B014'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-cream: #FAFAF7;
-      --bg-card: #FFFFFF;
-      --brand-green: #1E3A2F;
-      --brand-green-hover: #152921;
-      --brand-green-light: #EBF2EE;
-      --brand-yellow: #F4B942;
-      --brand-yellow-subtle: #FFF8E7;
-      --text-main: #1A1C19;
-      --text-muted: #60645E;
-      --text-light: #8E928B;
-      --border-color: #E8E6DF;
-      --border-polaroid: #F0EEE6;
-      --shadow-soft: 0 4px 20px -2px rgba(30, 58, 47, 0.05);
-      --shadow-polaroid: 0 12px 32px -4px rgba(30, 58, 47, 0.12), 0 2px 6px rgba(0,0,0,0.04);
-      --font-display: 'Outfit', -apple-system, sans-serif;
-      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 20px;
-      --radius-polaroid: 4px;
-      --container-max: 1140px;
-    }
-
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    button {
-      font-family: inherit;
-      cursor: pointer;
-      border: none;
-      background: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--container-max);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: var(--font-display);
-      font-weight: 600;
-      color: var(--brand-green);
-      line-height: 1.2;
-      letter-spacing: -0.02em;
-    }
-
-    .section-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--brand-green);
-      background-color: var(--brand-green-light);
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-
-    .section-tag::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background-color: var(--brand-yellow);
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      margin-bottom: 1rem;
-    }
-
-    .section-subtitle {
-      font-size: 1.125rem;
-      color: var(--text-muted);
-      max-width: 620px;
-    }
-
-    .text-center { text-align: center; }
-    .center-block { margin-left: auto; margin-right: auto; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: 0.95rem;
-      padding: 0.85rem 1.75rem;
-      border-radius: 999px;
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background-color: var(--brand-green);
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(30, 58, 47, 0.18);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--brand-green-hover);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background-color: var(--bg-card);
-      color: var(--brand-green);
-      border: 1.5px solid var(--border-color);
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--brand-green);
-      transform: translateY(-2px);
-    }
-
-    .btn-yellow {
-      background-color: var(--brand-yellow);
-      color: var(--brand-green);
-      font-weight: 600;
-    }
-
-    .btn-yellow:hover {
-      background-color: #e5ab37;
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background-color: #2D6A4F;
-      color: #FFFFFF;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #24553F;
-      transform: translateY(-2px);
-    }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(250, 250, 247, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 74px;
-    }
-
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .logo-text {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 2rem;
-      letter-spacing: -0.04em;
-      color: var(--brand-green);
-      line-height: 1;
-    }
-
-    .logo-text .lens-dot {
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      background-color: var(--brand-yellow);
-      border-radius: 50%;
-      margin-left: 2px;
-    }
-
-    .logo-badge {
-      font-size: 0.6875rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-      color: var(--text-muted);
-      border-left: 1px solid var(--border-color);
-      padding-left: 0.6rem;
-      margin-left: 0.2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-link {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .nav-link:hover { color: var(--brand-green); }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .mobile-menu-btn {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      padding: 0.5rem;
-      cursor: pointer;
-    }
-
-    .mobile-menu-btn span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background-color: var(--brand-green);
-      border-radius: 2px;
-    }
-
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 74px;
-      left: 0;
-      right: 0;
-      background-color: var(--bg-cream);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1.5rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
-
-    .mobile-nav.is-open { display: block; }
-
-    .mobile-nav ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .mobile-nav a {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--brand-green);
-    }
-
-    .hero-section {
-      padding: 4rem 0 4.5rem;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .hero-badge-location {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background-color: var(--brand-yellow-subtle);
-      border: 1px solid rgba(244, 185, 66, 0.4);
-      padding: 0.35rem 0.85rem;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #7A5506;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-badge-location svg {
-      width: 14px;
-      height: 14px;
-      fill: #B8810E;
-    }
-
-    .hero-title {
-      font-size: clamp(2.3rem, 5vw, 3.5rem);
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title span.highlight {
-      position: relative;
-      display: inline-block;
-    }
-
-    .hero-title span.highlight::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 6px;
-      width: 100%;
-      height: 10px;
-      background-color: rgba(244, 185, 66, 0.35);
-      z-index: -1;
-      border-radius: 2px;
-    }
-
-    .hero-description {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-footer-note {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.875rem;
-      color: var(--text-light);
-    }
-
-    .hero-footer-note svg {
-      color: var(--brand-green);
-      flex-shrink: 0;
-    }
-
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-    }
-
-    .polaroid-stack {
-      position: relative;
-      width: 100%;
-      max-width: 360px;
-      aspect-ratio: 0.82;
-    }
-
-    .polaroid-card {
-      background: #FFFFFF;
-      padding: 14px 14px 44px 14px;
-      border-radius: var(--radius-polaroid);
-      box-shadow: var(--shadow-polaroid);
-      border: 1px solid var(--border-polaroid);
-      position: relative;
-      transition: transform 0.3s ease;
-    }
-
-    .polaroid-card:hover {
-      transform: rotate(0deg) scale(1.02) !important;
-    }
-
-    .polaroid-primary {
-      transform: rotate(-3deg);
-      z-index: 2;
-    }
-
-    .polaroid-secondary {
-      position: absolute;
-      top: 20px;
-      right: -10px;
-      width: 90%;
-      transform: rotate(4deg);
-      z-index: 1;
-      opacity: 0.85;
-    }
-
-    .polaroid-img-wrapper {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background-color: #EFEFEA;
-      overflow: hidden;
-      border-radius: 2px;
-    }
-
-    .polaroid-img-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .polaroid-caption {
-      margin-top: 14px;
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #383A35;
-      text-align: center;
-    }
-
-    .polaroid-pill {
-      position: absolute;
-      bottom: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--brand-green);
-      color: #FFFFFF;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.9rem;
-      border-radius: 999px;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(30, 58, 47, 0.2);
-    }
-
-    .section-padding { padding: 5rem 0; }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-
-    .step-card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 2.25rem 1.75rem;
-      transition: transform 0.25s ease;
-    }
-
-    .step-card:hover { transform: translateY(-4px); }
-
-    .step-number {
-      font-family: var(--font-display);
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: rgba(30, 58, 47, 0.12);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .step-title {
-      font-size: 1.3rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .step-text {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    .step-badge {
-      display: inline-block;
-      margin-top: 1.25rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--brand-green);
-      background-color: var(--brand-green-light);
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-    }
-
-    .pricing-section {
-      background-color: #F4F3EE;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-top: 3.5rem;
-      align-items: stretch;
-    }
-
-    .pricing-card {
-      background-color: var(--bg-card);
-      border: 1.5px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-    }
-
-    .pricing-card.is-featured {
-      border-color: var(--brand-green);
-      box-shadow: 0 12px 30px -4px rgba(30, 58, 47, 0.12);
-      transform: scale(1.03);
-      z-index: 2;
-    }
-
-    .featured-tag {
-      position: absolute;
-      top: -14px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--brand-yellow);
-      color: var(--brand-green);
-      font-family: var(--font-display);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.35rem 1rem;
-      border-radius: 999px;
-      white-space: nowrap;
-    }
-
-    .pricing-title { font-size: 1.35rem; margin-bottom: 0.35rem; }
-    .pricing-subtitle { font-size: 0.9rem; color: var(--text-muted); min-height: 42px; }
-
-    .pricing-value {
-      font-family: var(--font-display);
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: var(--brand-green);
-      margin: 1rem 0 1.5rem;
-      line-height: 1;
-    }
-
-    .pricing-value span {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .pricing-features {
-      list-style: none;
-      margin-bottom: 2rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .pricing-features li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.92rem;
-      color: var(--text-muted);
-    }
-
-    .pricing-features svg {
-      width: 18px;
-      height: 18px;
-      color: var(--brand-green);
-      flex-shrink: 0;
-    }
-
-    .pricing-disclaimer {
-      margin-top: 2.5rem;
-      text-align: center;
-      font-size: 0.875rem;
-      color: var(--text-muted);
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .gallery-item:nth-child(1) { grid-column: span 4; }
-    .gallery-item:nth-child(2) { grid-column: span 4; }
-    .gallery-item:nth-child(3) { grid-column: span 4; }
-    .gallery-item:nth-child(4) { grid-column: span 6; }
-    .gallery-item:nth-child(5) { grid-column: span 6; }
-
-    .gallery-polaroid {
-      background: #FFFFFF;
-      padding: 12px 12px 34px 12px;
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-polaroid);
-      box-shadow: var(--shadow-soft);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.25s ease;
-    }
-
-    .gallery-polaroid:hover { transform: translateY(-4px); }
-
-    .gallery-img-container {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      background-color: #EEECE6;
-      border-radius: 2px;
-    }
-
-    .gallery-polaroid.is-landscape .gallery-img-container {
-      aspect-ratio: 16 / 11;
-    }
-
-    .gallery-img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .gallery-caption {
-      margin-top: 12px;
-      font-size: 0.85rem;
-      font-family: var(--font-display);
-      font-weight: 500;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    .gallery-note {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: var(--text-light);
-      font-style: italic;
-    }
-
-    .spots-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-
-    .spot-card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      padding: 1.75rem;
-    }
-
-    .spot-type {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--brand-green);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-
-    .spot-name { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    .spot-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
-
-    .status-banner {
-      margin-top: 2.5rem;
-      background-color: #FFFFFF;
-      border: 1px solid var(--border-color);
-      border-left: 4px solid var(--brand-yellow);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem 1.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .status-text { font-size: 0.95rem; color: var(--text-muted); }
-    .status-text strong { color: var(--brand-green); }
-
-    .events-wrapper {
-      background-color: var(--brand-green);
-      color: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 4rem 3rem;
-    }
-
-    .events-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .events-content h2 { color: #FFFFFF; font-size: clamp(2rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem; }
-    .events-content p { color: #D3DDD8; font-size: 1.05rem; margin-bottom: 1.75rem; }
-
-    .events-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .events-list li {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      color: #E2ECE7;
-    }
-
-    .events-list svg { color: var(--brand-yellow); flex-shrink: 0; }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .faq-item {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    .faq-item.is-active { border-color: var(--brand-green); }
-
-    .faq-trigger {
-      width: 100%;
-      padding: 1.25rem 1.5rem;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--brand-green);
-    }
-
-    .faq-trigger svg { transition: transform 0.2s ease; }
-    .faq-item.is-active .faq-trigger svg { transform: rotate(180deg); }
-
-    .faq-answer {
-      display: none;
-      padding: 0 1.5rem 1.25rem 1.5rem;
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .faq-item.is-active .faq-answer { display: block; }
-
-    .contact-card {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius-lg);
-      padding: 2.5rem 2rem;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .contact-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
-    .contact-card p { color: var(--text-muted); margin-bottom: 1.75rem; font-size: 0.95rem; }
-
-    .contact-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(25, 26, 25, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-
-    .modal-overlay.is-active { display: flex; }
-
-    .modal-box {
-      background: #FFFFFF;
-      border-radius: var(--radius-lg);
-      padding: 2.25rem 2rem;
-      max-width: 440px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
-
-    .modal-box h4 {
-      font-size: 1.4rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .modal-box p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .site-footer {
-      border-top: 1px solid var(--border-color);
-      background-color: #FFFFFF;
-      padding: 4rem 0 2rem;
-    }
-
-    .footer-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 3rem;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .footer-brand p {
-      color: var(--text-muted);
-      max-width: 320px;
-      margin-top: 0.75rem;
-      font-size: 0.95rem;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 3rem;
-      list-style: none;
-    }
-
-    .footer-nav h4 {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 1rem;
-      color: var(--brand-green);
-    }
-
-    .footer-nav ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .footer-nav a { color: var(--text-muted); font-size: 0.9rem; }
-    .footer-nav a:hover { color: var(--brand-green); }
-
-    .footer-bottom {
-      border-top: 1px solid var(--border-color);
-      padding-top: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.85rem;
-      color: var(--text-light);
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    @media (max-width: 992px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
-      .hero-actions, .hero-footer-note { justify-content: center; }
-      .steps-grid, .pricing-grid { grid-template-columns: 1fr; }
-      .pricing-card.is-featured { transform: none; }
-      .gallery-item:nth-child(n) { grid-column: span 6; }
-      .spots-grid { grid-template-columns: 1fr 1fr; }
-      .events-grid, .faq-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links, .header-actions .btn-whatsapp { display: none; }
-      .mobile-menu-btn { display: flex; }
-      .gallery-item:nth-child(n) { grid-column: span 12; }
-      .spots-grid { grid-template-columns: 1fr; }
-      .status-banner { flex-direction: column; align-items: flex-start; }
-      .events-wrapper { padding: 2.75rem 1.75rem; }
-      .events-list { grid-template-columns: 1fr; }
-      .footer-top { flex-direction: column; }
-      .footer-nav { flex-direction: column; gap: 1.5rem; }
+    :root{--bg:#FAF8F2;--card:#FFF;--green:#1E3A2B;--green-h:#14271D;--yellow:#F5B014;--yellow-light:#FEF7E6;--text:#1D211E;--muted:#636B65;--border:#E8E4D8;--sh:0 10px 25px rgba(30,58,43,0.06);--pol:0 14px 32px rgba(30,58,43,0.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6}
+    h1,h2,h3{font-family:'Fredoka',sans-serif;color:var(--green);line-height:1.2;font-weight:700}
+    .wrap{max-width:1120px;margin:auto;padding:0 1.5rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.8rem;border-radius:99px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:.2s}
+    .btn-green{background:var(--green);color:#fff}
+    .btn-green:hover{background:var(--green-h);transform:translateY(-2px)}
+    .btn-yellow{background:var(--yellow);color:var(--green)}
+    .btn-yellow:hover{background:#e0a00f;transform:translateY(-2px)}
+    .btn-sec{background:#fff;color:var(--green);border:1.5px solid var(--border)}
+    .btn-sec:hover{border-color:var(--green);transform:translateY(-2px)}
+    .btn-wpp{background:#25D366;color:#1E3A2B;font-weight:700}
+    .btn-wpp:hover{background:#20bd5a;transform:translateY(-2px)}
+    .tag{display:inline-block;padding:.35rem .9rem;border-radius:99px;font-size:.78rem;font-family:'Fredoka',sans-serif;font-weight:600;text-transform:uppercase;background:#E7EFEA;color:var(--green);margin-bottom:.8rem}
+    .sec-pad{padding:5rem 0}
+    .center{text-align:center}
+    
+    /* Header */
+    header{position:sticky;top:0;background:rgba(250,248,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:90}
+    .nav-box{display:flex;justify-content:space-between;align-items:center;height:76px}
+    
+    /* Logo da Marca Estilo Oficial */
+    .brand-svg{display:inline-flex;align-items:center;gap:3px;text-decoration:none;cursor:pointer}
+    .brand-svg span.f-text{font-family:'Fredoka',sans-serif;font-weight:700;font-size:2.4rem;color:var(--green);letter-spacing:-0.03em;line-height:1}
+    .camera-icon{position:relative;width:34px;height:34px;background:#F0EEE8;border:2px solid var(--green);border-radius:9px;display:inline-flex;align-items:center;justify-content:center;margin:0 2px;box-shadow:inset 0 1px 2px rgba(0,0,0,0.06)}
+    .camera-lens{width:16px;height:16px;border-radius:50%;background:#1D211E;border:2.5px solid #333C36;display:flex;align-items:center;justify-content:center}
+    .camera-lens::after{content:'';width:4px;height:4px;border-radius:50%;background:#fff;opacity:0.8}
+    .camera-viewfinder{position:absolute;top:3px;right:3px;width:4px;height:4px;background:#1D211E;border-radius:1px}
+    .camera-rays{position:absolute;top:-8px;right:-7px;display:flex;gap:2px}
+    .camera-rays span{width:3px;height:7px;background:var(--yellow);border-radius:2px;display:inline-block}
+    .camera-rays span:nth-child(1){transform:rotate(-30deg);height:5px}
+    .camera-rays span:nth-child(2){transform:rotate(10deg);margin-top:-2px}
+    .camera-rays span:nth-child(3){transform:rotate(40deg);height:6px}
+    .yellow-dot{display:inline-block;width:9px;height:9px;background:var(--yellow);border-radius:50%;margin-left:2px;vertical-align:baseline}
+
+    .menu{display:flex;gap:1.6rem;list-style:none}
+    .menu a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+    .menu a:hover{color:var(--green)}
+    
+    /* Hero */
+    .hero{padding:4rem 0 4.5rem}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+    .hero h1{font-size:clamp(2.4rem,4.2vw,3.6rem);margin-bottom:1.2rem}
+    .hero h1 span{background:linear-gradient(180deg,transparent 65%,rgba(245,176,20,.35) 65%)}
+    .hero p{font-size:1.15rem;color:var(--muted);margin-bottom:1.8rem}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+    
+    /* Polaroid */
+    .pol-card{background:#fff;padding:14px 14px 42px;border:1px solid #ECEAE3;border-radius:4px;box-shadow:var(--pol);position:relative}
+    .pol-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:2px}
+    .pol-card p{margin-top:14px;text-align:center;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;color:var(--green)}
+    
+    /* Grids Responsivos para Tablet e Celular */
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:3rem}
+    .step-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2.2rem 1.8rem}
+    .step-num{font-size:2.4rem;font-weight:700;color:rgba(30,58,43,.15);margin-bottom:.5rem;font-family:'Fredoka'}
+    
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem}
+    .price-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2.5rem 1.8rem;display:flex;flex-direction:column;position:relative}
+    .price-card.featured{border-color:var(--green);box-shadow:var(--sh);background:#FFF}
+    .feat-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--green);padding:.3rem .9rem;border-radius:99px;font-size:.75rem;font-family:'Fredoka',sans-serif;font-weight:700;text-transform:uppercase}
+    .val{font-size:2.8rem;font-weight:700;color:var(--green);font-family:'Fredoka';margin:.6rem 0 1.2rem}
+    .val span{font-size:.95rem;color:var(--muted);font-weight:400;font-family:'Plus Jakarta Sans'}
+    .price-list{list-style:none;margin-bottom:2rem;flex-grow:1}
+    .price-list li{margin-bottom:.6rem;color:var(--muted);font-size:.95rem}
+    
+    /* Faixa de Pagamentos */
+    .payments-strip{margin-top:2.5rem;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:.95rem;color:var(--green)}
+    .pay-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;background:var(--yellow-light);padding:.35rem .75rem;border-radius:8px;font-size:.85rem}
+    
+    .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+    
+    .spots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+    .spot{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.8rem}
+    .spot h3{font-size:1.25rem;margin:.5rem 0 .4rem}
+    .spot p{font-size:.9rem;color:var(--muted)}
+    
+    .event-box{background:var(--green);color:#fff;border-radius:24px;padding:4rem 3rem}
+    .event-box h2{color:#fff;font-size:clamp(2rem,3vw,2.6rem);margin-bottom:1rem}
+    .event-box p{color:#D5DFD9;margin-bottom:1.8rem;font-size:1.05rem}
+    
+    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:3rem;margin-top:3rem}
+    .faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:.9rem;overflow:hidden}
+    .faq-btn{width:100%;padding:1.2rem;text-align:left;background:none;border:none;font-weight:700;font-size:1.05rem;font-family:'Fredoka',sans-serif;color:var(--green);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-ans{display:none;padding:0 1.2rem 1.2rem;font-size:.95rem;color:var(--muted);line-height:1.6}
+    .faq-item.open .faq-ans{display:block}
+    .contact-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.5rem;box-shadow:var(--sh)}
+    
+    /* Botão Flutuante do WhatsApp */
+    .wpp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#1E3A2B;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:95;cursor:pointer;transition:.25s;text-decoration:none}
+    .wpp-float:hover{transform:scale(1.1)}
+    
+    @media(max-width:960px){
+      .hero-grid{grid-template-columns:1fr;text-align:center;gap:2.5rem}
+      .hero-btns{justify-content:center}
+      .menu{display:none}
+      .sec-pad{padding:4rem 0}
+      .event-box{padding:3rem 2rem}
     }
   </style>
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="#inicio" class="brand-logo" aria-label="Fotta">
-          <span class="logo-text">fotta<span class="lens-dot"></span></span>
-          <span class="logo-badge">Nova Friburgo</span>
-        </a>
-
-        <nav aria-label="Navegação Principal">
-          <ul class="nav-links">
-            <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
-            <li><a href="#precos" class="nav-link">Preços</a></li>
-            <li><a href="#galeria" class="nav-link">Galeria</a></li>
-            <li><a href="#onde-encontrar" class="nav-link">Onde Encontrar</a></li>
-            <li><a href="#eventos" class="nav-link">Eventos</a></li>
-            <li><a href="#faq" class="nav-link">Dúvidas</a></li>
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-          <button class="btn btn-whatsapp contact-trigger" data-type="whatsapp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.761.889 2.796.889 3.182 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.776-5.768-5.776zm0 13.082c-1.127 0-2.228-.31-3.189-.899l-3.535.927.943-3.447c-.649-.993-.993-2.148-.992-3.329 0-3.473 2.824-6.297 6.298-6.297 3.475 0 6.3 2.824 6.3 6.297 0 3.474-2.825 6.298-6.3 6.298zm-6.239-16.254c-1.848 1.846-2.866 4.301-2.867 6.915-.002 2.378.85 4.673 2.404 6.471l-1.571 5.74 5.874-1.54c1.726 1.472 3.918 2.278 6.183 2.278 2.616 0 5.072-1.017 6.919-2.864 1.846-1.847 2.864-4.304 2.864-6.92 0-2.616-1.018-5.072-2.865-6.92-1.847-1.846-4.303-2.865-6.92-2.865-2.616 0-5.073 1.019-6.92 2.865z"/>
-            </svg>
-            <span>Falar no WhatsApp</span>
-          </button>
-
-          <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+  <!-- Header -->
+  <header>
+    <div class="wrap nav-box">
+      <!-- Logo Oficial Fotta -->
+      <a href="#inicio" class="brand-svg">
+        <span class="f-text">f</span>
+        <div class="camera-icon">
+          <div class="camera-rays"><span></span><span></span><span></span></div>
+          <div class="camera-viewfinder"></div>
+          <div class="camera-lens"></div>
         </div>
-      </div>
-    </div>
+        <span class="f-text">tta</span>
+        <span class="yellow-dot"></span>
+      </a>
 
-    <div class="mobile-nav" id="mobile-drawer">
-      <ul>
-        <li><a href="#como-funciona" class="mobile-link">Como Funciona</a></li>
-        <li><a href="#precos" class="mobile-link">Preços</a></li>
-        <li><a href="#galeria" class="mobile-link">Galeria</a></li>
-        <li><a href="#onde-encontrar" class="mobile-link">Onde Encontrar</a></li>
-        <li><a href="#eventos" class="mobile-link">Eventos</a></li>
-        <li><a href="#faq" class="mobile-link">Dúvidas</a></li>
-        <li style="margin-top: 0.5rem;">
-          <button class="btn btn-whatsapp contact-trigger" data-type="whatsapp" style="width: 100%;">
-            Falar no WhatsApp
-          </button>
-        </li>
+      <ul class="menu">
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#onde-encontrar">Onde Encontrar</a></li>
+        <li><a href="#eventos">Eventos</a></li>
       </ul>
+      <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="btn btn-wpp">WhatsApp</a>
     </div>
   </header>
 
   <main>
-    <section id="inicio" class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-badge-location">
-              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-              <span>Nova Friburgo — Região Serrana, RJ</span>
-            </div>
-            
-            <h1 class="hero-title">
-              Tem momentos que merecem <span class="highlight">sair da tela.</span>
-            </h1>
-
-            <p class="hero-description">
-              A Fotta transforma encontros especiais em fotografias instantâneas para levar com você, guardar no bolso e reviver sempre que quiser.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#precos" class="btn btn-primary">Quero minha Fotta</a>
-              <a href="#como-funciona" class="btn btn-secondary">Como funciona</a>
-            </div>
-
-            <div class="hero-footer-note">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-              </svg>
-              <span>Fotografia física autêntica com câmera Instax.</span>
-            </div>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="tag">Nova Friburgo — RJ</span>
+          <h1>Tem momentos que merecem <span>sair da tela.</span></h1>
+          <p>A Fotta transforma encontros especiais em fotografias instantâneas para levar com você, guardar no bolso e reviver sempre que quiser.</p>
+          <div class="hero-btns">
+            <a href="#precos" class="btn btn-green">Quero minha Fotta</a>
+            <a href="#como-funciona" class="btn btn-sec">Como funciona</a>
           </div>
-
-          <div class="hero-visual">
-            <div class="polaroid-stack">
-              <div class="polaroid-card polaroid-secondary">
-                <div class="polaroid-img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80" alt="Momentos espontâneos">
-                </div>
-              </div>
-
-              <div class="polaroid-card polaroid-primary">
-                <div class="polaroid-img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80" alt="Fotografia instantânea física">
-                </div>
-                <div class="polaroid-caption">
-                  <span>um instante, para sempre</span>
-                </div>
-                <div class="polaroid-pill">Foto Física Real</div>
-              </div>
-            </div>
+        </div>
+        <div style="display:flex;justify-content:center;">
+          <div class="pol-card" style="transform:rotate(-2deg);max-width:340px;width:100%">
+            <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80" alt="Fotta Polaroid">
+            <p>um instante, para sempre.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="como-funciona" class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--border-color);">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Simples e Espontâneo</span>
-          <h2 class="section-title">Como funciona a sua Fotta</h2>
-          <p class="section-subtitle center-block">
-            Sem poses artificiais ou demoras. Uma lembrança palpável feita para marcar o seu passeio ou comemoração.
-          </p>
-        </div>
-
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="sec-pad" style="background:#fff;border-top:1px solid var(--border)">
+      <div class="wrap center">
+        <span class="tag">Espontâneo</span>
+        <h2>Como funciona a sua Fotta</h2>
         <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3 class="step-title">Viva o momento</h3>
-            <p class="step-text">
-              Aproveite seu passeio, encontro ou celebração em Nova Friburgo. Esteja presente com quem você gosta.
-            </p>
-            <span class="step-badge">Espontaneidade</span>
+          <div class="step-box">
+            <div class="step-num">01</div>
+            <h3>Viva o momento</h3>
+            <p>Aproveite seu passeio ou celebração com quem você gosta em Nova Friburgo.</p>
           </div>
-
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3 class="step-title">Faça sua fotografia</h3>
-            <p class="step-text">
-              Encontre nossa câmera instantânea e faça o clique. A luz natural e o instante sincero são capturados na hora.
-            </p>
-            <span class="step-badge">Câmera Instax</span>
+          <div class="step-box">
+            <div class="step-num">02</div>
+            <h3>Faça sua foto</h3>
+            <p>Encontre nossa câmera instantânea e faça o clique sem poses forçadas.</p>
           </div>
-
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3 class="step-title">Leve para casa</h3>
-            <p class="step-text">
-              A foto física começa a se revelar em suas mãos. Uma memória tangível para a carteira, o mural ou presentear.
-            </p>
-            <span class="step-badge">Foto Física Original</span>
+          <div class="step-box">
+            <div class="step-num">03</div>
+            <h3>Leve para casa</h3>
+            <p>A foto física revela na hora nas suas mãos. Uma memória para sempre.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="precos" class="section-padding pricing-section">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Tabela Comercial</span>
-          <h2 class="section-title">Escolha como quer registrar</h2>
-          <p class="section-subtitle center-block">
-            Valores claros e acessíveis para você levar momentos para sempre.
-          </p>
-        </div>
-
+    <!-- Preços -->
+    <section id="precos" class="sec-pad" style="background:#F4F1E8">
+      <div class="wrap center">
+        <span class="tag">Tabela Comercial</span>
+        <h2>Escolha como registrar</h2>
         <div class="pricing-grid">
-          <div class="pricing-card">
-            <h3 class="pricing-title">1 Fotografia</h3>
-            <p class="pricing-subtitle">Para registrar um encontro especial.</p>
-            <div class="pricing-value">R$ 15<span>/ foto</span></div>
-            <ul class="pricing-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>1 foto física original</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Formato instantâneo autêntico</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Revelação na hora</span>
-              </li>
+          <div class="price-card">
+            <h3>1 Fotografia</h3>
+            <div class="val">R$ 15<span>/ foto</span></div>
+            <ul class="price-list">
+              <li>• 1 foto física original</li>
+              <li>• Formato instantâneo autêntico</li>
+              <li>• Revelação imediata em mãos</li>
             </ul>
-            <button class="btn btn-secondary contact-trigger" data-type="whatsapp" data-item="1 foto (R$ 15)">
-              Pedir 1 foto
-            </button>
+            <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20pedir%201%20fotografia%20com%20a%20Fotta." target="_blank" class="btn btn-sec">Pedir 1 foto</a>
           </div>
 
-          <div class="pricing-card">
-            <h3 class="pricing-title">2 Fotografias</h3>
-            <p class="pricing-subtitle">Uma para você guardar, outra para presentear.</p>
-            <div class="pricing-value">R$ 30<span>/ par</span></div>
-            <ul class="pricing-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>2 fotos físicas originais</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Ideal para duplas ou casais</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Revelação na hora</span>
-              </li>
+          <div class="price-card">
+            <h3>2 Fotografias</h3>
+            <div class="val">R$ 30<span>/ par</span></div>
+            <ul class="price-list">
+              <li>• 2 fotos físicas originais</li>
+              <li>• Perfeito para duplas ou casais</li>
+              <li>• Revelação imediata em mãos</li>
             </ul>
-            <button class="btn btn-secondary contact-trigger" data-type="whatsapp" data-item="2 fotos (R$ 30)">
-              Pedir 2 fotos
-            </button>
+            <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20pedir%202%20fotografias%20com%20a%20Fotta." target="_blank" class="btn btn-sec">Pedir 2 fotos</a>
           </div>
 
-          <div class="pricing-card is-featured">
-            <div class="featured-tag">Mais Escolhido</div>
-            <h3 class="pricing-title">3 Fotografias</h3>
-            <p class="pricing-subtitle">A melhor opção para amigos, famílias e passeios.</p>
-            <div class="pricing-value">R$ 40<span>/ trio</span></div>
-            <ul class="pricing-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>3 fotos físicas originais</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Maior valor e lembranças extras</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                <span>Revelação na hora</span>
-              </li>
+          <div class="price-card featured">
+            <div class="feat-tag">Mais Escolhido</div>
+            <h3>3 Fotografias</h3>
+            <div class="val">R$ 40<span>/ trio</span></div>
+            <ul class="price-list">
+              <li>• 3 fotos físicas originais</li>
+              <li>• A melhor opção para passeios</li>
+              <li>• Revelação imediata em mãos</li>
             </ul>
-            <button class="btn btn-primary contact-trigger" data-type="whatsapp" data-item="3 fotos (R$ 40)">
-              Pedir 3 fotos
-            </button>
+            <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20pedir%20o%20pacote%20de%203%20fotografias%20com%20a%20Fotta." target="_blank" class="btn btn-green">Pedir 3 fotos</a>
           </div>
         </div>
 
-        <p class="pricing-disclaimer">
-          * A disponibilidade e as condições de atendimento podem variar em eventos contratados ou locais externos.
-        </p>
+        <!-- Formas de Pagamento -->
+        <div class="payments-strip">
+          <strong>Formas de Pagamento aceitas:</strong>
+          <span class="pay-badge">✓ Pix</span>
+          <span class="pay-badge">✓ Dinheiro</span>
+          <span class="pay-badge">✓ Cartão de Débito</span>
+          <span class="pay-badge">✓ Cartão de Crédito</span>
+        </div>
       </div>
     </section>
 
-    <section id="galeria" class="section-padding">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Álbum Visual</span>
-          <h2 class="section-title">Instantes que contam histórias</h2>
-          <p class="section-subtitle center-block">
-            Amizades, risos espontâneos, passeios em família e a atmosfera serena de Nova Friburgo.
-          </p>
+    <!-- Galeria -->
+    <section id="galeria" class="sec-pad">
+      <div class="wrap center">
+        <span class="tag">Álbum Visual</span>
+        <h2>Instantes reais</h2>
+        <div class="gal-grid">
+          <div class="pol-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80" alt="Amigos"><p>Risadas sem pose</p></div>
+          <div class="pol-card"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Passeio"><p>No bolso para sempre</p></div>
+          <div class="pol-card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Serra"><p>Serras de Friburgo</p></div>
         </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-polaroid">
-              <div class="gallery-img-container">
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=700&q=80" alt="Encontro entre amigos" loading="lazy">
-              </div>
-              <p class="gallery-caption">Amigos reunidos no fim de tarde</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-polaroid">
-              <div class="gallery-img-container">
-                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80" alt="Risadas espontâneas" loading="lazy">
-              </div>
-              <p class="gallery-caption">Risadas sem pose combinada</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-polaroid">
-              <div class="gallery-img-container">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80" alt="Lembrança no bolso" loading="lazy">
-              </div>
-              <p class="gallery-caption">Um instante para levar no bolso</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-polaroid is-landscape">
-              <div class="gallery-img-container">
-                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Paisagem de serra" loading="lazy">
-              </div>
-              <p class="gallery-caption">Passeio pelas serras friburguenses</p>
-            </div>
-          </div>
-
-          <div class="gallery-item">
-            <div class="gallery-polaroid is-landscape">
-              <div class="gallery-img-container">
-                <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Revelação da foto" loading="lazy">
-              </div>
-              <p class="gallery-caption">A sensação de ver a foto revelar</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="gallery-note">
-          * Fotografias demonstrativas representativas da estética e formato das lembranças físicas produzidas pela Fotta.
-        </p>
       </div>
     </section>
 
-    <section id="onde-encontrar" class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--border-color);">
-      <div class="container">
-        <div class="text-center">
-          <span class="section-tag">Itinerância</span>
-          <h2 class="section-title">Por aí, em Nova Friburgo</h2>
-          <p class="section-subtitle center-block">
-            A Fotta é itinerante e atua em locais abertos, pontos de lazer e eventos.
-          </p>
+    <!-- Onde Encontrar -->
+    <section id="onde-encontrar" class="sec-pad" style="background:#fff;border-top:1px solid var(--border)">
+      <div class="wrap">
+        <div class="center">
+          <span class="tag">Itinerância</span>
+          <h2>Por aí, em Nova Friburgo</h2>
         </div>
-
         <div class="spots-grid">
-          <div class="spot-card">
-            <span class="spot-type">Ponto de Interesse</span>
-            <h3 class="spot-name">Praça do Suspiro</h3>
-            <p class="spot-desc">Ponto clássico de lazer, encontros e caminhadas no coração da cidade.</p>
-          </div>
-
-          <div class="spot-card">
-            <span class="spot-type">Ponto de Interesse</span>
-            <h3 class="spot-name">Espaço ARP</h3>
-            <p class="spot-desc">Ambiente criativo, gastronômico e cultural perfeito para memórias espontâneas.</p>
-          </div>
-
-          <div class="spot-card">
-            <span class="spot-type">Ponto de Interesse</span>
-            <h3 class="spot-name">Country Club</h3>
-            <p class="spot-desc">Espaço verde histórico, cercado por jardins e passeios tranquilos.</p>
-          </div>
-
-          <div class="spot-card">
-            <span class="spot-type">Sob Reserva</span>
-            <h3 class="spot-name">Eventos & Festas</h3>
-            <p class="spot-desc">Atendimento sob contratação para ocasiões especiais e comemorações.</p>
-          </div>
-        </div>
-
-        <div class="status-banner">
-          <div class="status-text">
-            <strong>Onde a Fotta está hoje?</strong>
-            <p>
-              Nossa presença depende do clima e da programação de passeios. Consulte nossos canais antes de se deslocar!
-            </p>
-          </div>
-          <button class="btn btn-secondary contact-trigger" data-type="whatsapp" data-item="consultar onde estão hoje">
-            Consultar Local de Hoje
-          </button>
+          <div class="spot"><span class="tag">Ponto</span><h3>Praça do Suspiro</h3><p>Passeios e caminhadas no coração da cidade.</p></div>
+          <div class="spot"><span class="tag">Ponto</span><h3>Espaço ARP</h3><p>Cultura, gastronomia e encontros.</p></div>
+          <div class="spot"><span class="tag">Ponto</span><h3>Country Club</h3><p>Área verde clássica e natureza.</p></div>
+          <div class="spot"><span class="tag">Reserva</span><h3>Eventos & Festas</h3><p>Atendimento sob contratação particular.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="eventos" class="section-padding">
-      <div class="container">
-        <div class="events-wrapper">
-          <div class="events-grid">
-            <div class="events-content">
-              <span class="section-tag" style="background-color: rgba(244,185,66,0.18); color: var(--brand-yellow);">Eventos & Comemorações</span>
-              <h2>A lembrança física que seus convidados vão guardar</h2>
-              <p>
-                Em vez de lembrancinhas descartáveis, ofereça uma fotografia instantânea física tirada durante a sua celebração. Seus convidados acompanham a revelação e levam para casa uma memória carinhosa do seu evento.
-              </p>
-
-              <ul class="events-list">
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Aniversários e 15 anos</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Casamentos e mini weddings</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Festas particulares e comemorações</span>
-                </li>
-                <li>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  <span>Eventos corporativos e encontros</span>
-                </li>
-              </ul>
-
-              <button class="btn btn-yellow contact-trigger" data-type="whatsapp" data-item="consultar eventos">
-                Consultar disponibilidade para meu evento
-              </button>
-            </div>
-
-            <div style="display: flex; justify-content: center;">
-              <div class="polaroid-card" style="transform: rotate(3deg); max-width: 320px;">
-                <div class="polaroid-img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80" alt="Lembrança de evento">
-                </div>
-                <div class="polaroid-caption" style="color: #2D302B;">
-                  <span>Lembrança física para convidados</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Eventos -->
+    <section id="eventos" class="sec-pad">
+      <div class="wrap">
+        <div class="event-box">
+          <h2>Lembrança física para o seu evento</h2>
+          <p>Aniversários, casamentos e confraternizações em Nova Friburgo. Seus convidados saem da festa com a foto física revelada na hora.</p>
+          <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20consultar%20disponibilidade%20da%20Fotta%20para%20meu%20evento." target="_blank" class="btn btn-yellow">Consultar disponibilidade</a>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--border-color);">
-      <div class="container">
-        <div class="faq-grid">
-          <div>
-            <span class="section-tag">Dúvidas Frequentes</span>
-            <h2 class="section-title">Perguntas comuns</h2>
-            
-            <div class="faq-list">
-              <div class="faq-item is-active">
-                <button class="faq-trigger" aria-expanded="true">
-                  <span>A foto é impressa ou física instantânea?</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-answer">
-                  <p>A Fotta trabalha com fotografia física original instantânea (formato Instax). Você recebe na mão uma foto real com a clássica moldura branca, que começa a se revelar na hora para você guardar ou presentear.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span>Quanto tempo demora para a foto revelar?</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-answer">
-                  <p>O disparo é na hora e a imagem começa a aparecer em poucos segundos, atingindo tons e detalhes completos em poucos minutos em suas mãos.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span>Como sei onde vocês estão atendendo hoje?</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-answer">
-                  <p>Como nossa atuação em Nova Friburgo é itinerante (Praça do Suspiro, Espaço ARP, Country Club), informamos as saídas e locais do dia pelos nossos canais oficiais.</p>
-                </div>
-              </div>
-
-              <div class="faq-item">
-                <button class="faq-trigger" aria-expanded="false">
-                  <span>Vocês fazem eventos e casamentos?</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </button>
-                <div class="faq-answer">
-                  <p>Sim! Atendemos aniversários, casamentos e confraternizações para que os convidados levem uma foto física inesquecível da festa.</p>
-                </div>
-              </div>
+    <!-- FAQ & Contato -->
+    <section class="sec-pad" style="background:#fff;border-top:1px solid var(--border)">
+      <div class="wrap faq-grid">
+        <div>
+          <span class="tag">Dúvidas</span>
+          <h2>Perguntas comuns</h2>
+          <div style="margin-top:1.5rem">
+            <div class="faq-item open">
+              <button class="faq-btn">A foto é física ou digital? <span>↓</span></button>
+              <div class="faq-ans">A Fotta entrega fotos físicas autênticas (formato Instax), reveladas na hora em suas mãos.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn">Quanto tempo demora para revelar? <span>↓</span></button>
+              <div class="faq-ans">A foto começa a aparecer em segundos e atinge cores plenas em cerca de 2 minutos.</div>
             </div>
           </div>
-
-          <div class="contact-card">
-            <span class="section-tag" style="background-color: var(--brand-yellow-subtle); color: #7A5506;">Canais Oficiais</span>
-            <h3>Fale com a Fotta</h3>
-            <p>
-              Consulte a presença do dia ou solicite um orçamento para registrar sua festa ou encontro em Nova Friburgo.
-            </p>
-
-            <div class="contact-actions">
-              <button class="btn btn-whatsapp contact-trigger" data-type="whatsapp" style="width: 100%;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.761.889 2.796.889 3.182 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.776-5.768-5.776zm0 13.082c-1.127 0-2.228-.31-3.189-.899l-3.535.927.943-3.447c-.649-.993-.993-2.148-.992-3.329 0-3.473 2.824-6.297 6.298-6.297 3.475 0 6.3 2.824 6.3 6.297 0 3.474-2.825 6.298-6.3 6.298zm-6.239-16.254c-1.848 1.846-2.866 4.301-2.867 6.915-.002 2.378.85 4.673 2.404 6.471l-1.571 5.74 5.874-1.54c1.726 1.472 3.918 2.278 6.183 2.278 2.616 0 5.072-1.017 6.919-2.864 1.846-1.847 2.864-4.304 2.864-6.92 0-2.616-1.018-5.072-2.865-6.92-1.847-1.846-4.303-2.865-6.92-2.865-2.616 0-5.073 1.019-6.92 2.865z"/>
-                </svg>
-                <span>Falar no WhatsApp</span>
-              </button>
-
-              <button class="btn btn-secondary contact-trigger" data-type="instagram" style="width: 100%;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-                <span>Acompanhar no Instagram</span>
-              </button>
-            </div>
-
-            <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-light); text-align: center;">
-              Atendimento em Nova Friburgo — Região Serrana, RJ
-            </p>
-          </div>
+        </div>
+        <div class="contact-card">
+          <span class="tag">Atendimento</span>
+          <h3>Fale com a Fotta</h3>
+          <p style="color:var(--muted);margin:1rem 0 1.5rem">Quer saber onde estamos hoje em Nova Friburgo ou contratar para evento?</p>
+          <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Fotta." target="_blank" class="btn btn-wpp" style="width:100%;margin-bottom:.8rem">Chamar no WhatsApp</a>
+          <a href="https://instagram.com/_fotta" target="_blank" class="btn btn-sec" style="width:100%">Seguir @_fotta no Instagram</a>
         </div>
       </div>
     </section>
   </main>
 
-  <div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true">
-    <div class="modal-box">
-      <div style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--brand-yellow-subtle); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7A5506" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <h4>Canais em Ativação</h4>
-      <p id="modal-text">
-        Estamos preparando nossos canais oficiais para atendimento em Nova Friburgo. Muito em breve você poderá falar diretamente conosco por aqui!
-      </p>
-      <button class="btn btn-primary" id="modal-close-btn" style="width: 100%;">Entendido</button>
-    </div>
-  </div>
+  <!-- Botão Flutuante WhatsApp Oficial -->
+  <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="wpp-float" aria-label="Falar no WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.761.889 2.796.889 3.182 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.776-5.768-5.776zm0 13.082c-1.127 0-2.228-.31-3.189-.899l-3.535.927.943-3.447c-.649-.993-.993-2.148-.992-3.329 0-3.473 2.824-6.297 6.298-6.297 3.475 0 6.3 2.824 6.3 6.297 0 3.474-2.825 6.298-6.3 6.298zm-6.239-16.254c-1.848 1.846-2.866 4.301-2.867 6.915-.002 2.378.85 4.673 2.404 6.471l-1.571 5.74 5.874-1.54c1.726 1.472 3.918 2.278 6.183 2.278 2.616 0 5.072-1.017 6.919-2.864 1.846-1.847 2.864-4.304 2.864-6.92 0-2.616-1.018-5.072-2.865-6.92-1.847-1.846-4.303-2.865-6.92-2.865-2.616 0-5.073 1.019-6.92 2.865z"/>
+    </svg>
+  </a>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="logo-text">fotta<span class="lens-dot"></span></div>
-          <p>"um instante, para sempre."</p>
-          <p style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">
-            Fotografia instantânea física em Nova Friburgo, RJ.
-          </p>
-        </div>
-
-        <nav class="footer-nav">
-          <div>
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="#como-funciona">Como Funciona</a></li>
-              <li><a href="#precos">Preços</a></li>
-              <li><a href="#galeria">Galeria</a></li>
-              <li><a href="#onde-encontrar">Onde Encontrar</a></li>
-              <li><a href="#eventos">Eventos</a></li>
-            </ul>
+  <!-- Rodapé -->
+  <footer style="background:#fff;border-top:1px solid var(--border);padding:3rem 0;text-align:center;color:var(--muted);font-size:.9rem">
+    <div class="wrap">
+      <div style="margin-bottom:0.6rem">
+        <a href="#inicio" class="brand-svg">
+          <span class="f-text" style="font-size:2rem">f</span>
+          <div class="camera-icon" style="width:28px;height:28px">
+            <div class="camera-lens" style="width:14px;height:14px"></div>
           </div>
-
-          <div>
-            <h4>Locais Planejados</h4>
-            <ul>
-              <li><a href="#onde-encontrar">Praça do Suspiro</a></li>
-              <li><a href="#onde-encontrar">Espaço ARP</a></li>
-              <li><a href="#onde-encontrar">Country Club</a></li>
-            </ul>
-          </div>
-        </nav>
+          <span class="f-text" style="font-size:2rem">tta</span>
+          <span class="yellow-dot" style="width:7px;height:7px"></span>
+        </a>
       </div>
-
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> fotta. Todos os direitos reservados.</p>
-        <p>Momentos reais, guardados no papel.</p>
-      </div>
+      <p style="font-weight:600;color:var(--green);font-size:1rem;margin-bottom:.4rem">"um instante, para sempre."</p>
+      <p>Nova Friburgo — RJ</p>
     </div>
   </footer>
 
   <script>
-    const FOTTA_DATA = {
-      whatsapp: "", 
-      instagram: "" 
-    };
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-
-      const toggle = document.getElementById('mobile-toggle');
-      const drawer = document.getElementById('mobile-drawer');
-      if (toggle && drawer) {
-        toggle.addEventListener('click', () => drawer.classList.toggle('is-open'));
-        document.querySelectorAll('.mobile-link').forEach(link => {
-          link.addEventListener('click', () => drawer.classList.remove('is-open'));
-        });
-      }
-
-      document.querySelectorAll('.faq-trigger').forEach(trigger => {
-        trigger.addEventListener('click', () => {
-          const parent = trigger.parentElement;
-          const isOpen = parent.classList.contains('is-active');
-
-          document.querySelectorAll('.faq-item').forEach(el => {
-            el.classList.remove('is-active');
-            el.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
-          });
-
-          if (!isOpen) {
-            parent.classList.add('is-active');
-            trigger.setAttribute('aria-expanded', 'true');
-          }
-        });
-      });
-
-      const modal = document.getElementById('contact-modal');
-      const modalClose = document.getElementById('modal-close-btn');
-
-      if (modalClose) {
-        modalClose.addEventListener('click', () => modal.classList.remove('is-active'));
-      }
-
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.classList.remove('is-active');
-      });
-
-      document.querySelectorAll('.contact-trigger').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const type = btn.getAttribute('data-type');
-          const item = btn.getAttribute('data-item') || '';
-
-          if (type === 'whatsapp') {
-            if (FOTTA_DATA.whatsapp && FOTTA_DATA.whatsapp.trim() !== '') {
-              const msg = item ? `Olá! Gostaria de saber mais sobre: ${item}` : "Olá! Conheci a Fotta pelo site.";
-              window.open(`https://wa.me/${FOTTA_DATA.whatsapp}?text=${encodeURIComponent(msg)}`, '_blank');
-            } else {
-              modal.classList.add('is-active');
-            }
-          } else if (type === 'instagram') {
-            if (FOTTA_DATA.instagram && FOTTA_DATA.instagram.trim() !== '') {
-              window.open(`https://instagram.com/${FOTTA_DATA.instagram}`, '_blank');
-            } else {
-              modal.classList.add('is-active');
-            }
-          }
-        });
-      });
+    document.querySelectorAll('.faq-btn').forEach(b => {
+      b.onclick = () => b.parentElement.classList.toggle('open');
     });
   </script>
 </body>
