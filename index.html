@@ -6,11 +6,11 @@
   <title>fotta. — um instante, para sempre | Fotografia Instantânea</title>
   
   <!-- SEO & Prévia de Compartilhamento (WhatsApp / Redes) -->
-  <meta name="description" content="A Fotta transforma encontros especiais em fotografias instantâneas físicas em Nova Friburgo - RJ. Praça do Suspiro, Espaço ARP, Country Club e eventos.">
+  <meta name="description" content="A Fotta transforma encontros e eventos em fotografias instantâneas físicas em Nova Friburgo - RJ. Praça do Suspiro, Espaço ARP, casamentos e aniversários.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fottaoficial.github.io/fotta/">
   <meta property="og:title" content="fotta. — um instante, para sempre">
-  <meta property="og:description" content="Fotografias instantâneas físicas em Nova Friburgo - RJ. Momentos reais que merecem sair da tela.">
+  <meta property="og:description" content="Fotografias instantâneas físicas para passeios e eventos em Nova Friburgo - RJ. Momentos reais que saem da tela.">
   <meta property="og:image" content="https://fottaoficial.github.io/fotta/logo.png">
   <meta property="og:image:width" content="800">
   <meta property="og:image:height" content="800">
@@ -28,7 +28,7 @@
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6;overflow-x:hidden}
-    h1,h2,h3{font-family:'Fredoka',sans-serif;color:var(--green);line-height:1.2;font-weight:700}
+    h1,h2,h3,h4{font-family:'Fredoka',sans-serif;color:var(--green);line-height:1.2;font-weight:700}
     .wrap{max-width:1120px;margin:auto;padding:0 1.5rem}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.8rem;border-radius:99px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:transform .15s ease,background .2s ease}
     .btn:active{transform:scale(0.97)}
@@ -41,14 +41,13 @@
     .btn-wpp{background:#25D366;color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(37,211,102,.3)}
     .tag{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .9rem;border-radius:99px;font-size:.78rem;font-family:'Fredoka',sans-serif;font-weight:600;text-transform:uppercase;background:#E7EFEA;color:var(--green);margin-bottom:.8rem}
     .tag-dot{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
-    .sec-pad{padding:4.5rem 0}
+    .sec-pad{padding:5rem 0}
     .center{text-align:center}
     
     /* Header & Navegação */
     header{position:sticky;top:0;background:rgba(250,248,242,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:90}
     .nav-box{display:flex;justify-content:space-between;align-items:center;height:76px}
     
-    /* Logo Oficial com Enquadramento Perfeito */
     .brand-logo-link{display:inline-flex;align-items:center;gap:.75rem;text-decoration:none}
     .brand-logo-img{
       width:48px;
@@ -84,7 +83,7 @@
     .mob-drawer ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
     .mob-drawer a{text-decoration:none;font-family:'Fredoka',sans-serif;font-size:1.15rem;color:var(--green);font-weight:600}
 
-    /* Hero */
+    /* Hero Geral */
     .hero{padding:3.5rem 0 4rem}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
     .hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);margin-bottom:1.2rem}
@@ -92,16 +91,17 @@
     .hero p{font-size:1.15rem;color:var(--muted);margin-bottom:1.8rem}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
     
-    /* Polaroid */
+    /* Polaroid Card */
     .pol-card{background:#fff;padding:14px 14px 42px;border:1px solid #ECEAE3;border-radius:4px;box-shadow:var(--pol);position:relative;transition:transform .3s ease}
     .pol-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:2px}
     .pol-card p{margin-top:14px;text-align:center;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;color:var(--green)}
     
-    /* Grids */
+    /* Grids Padrão */
     .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;margin-top:2.5rem}
     .step-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2.2rem 1.8rem}
     .step-num{font-size:2.4rem;font-weight:700;color:rgba(30,58,43,.15);margin-bottom:.5rem;font-family:'Fredoka'}
     
+    /* Tabela de Preços Avulsos */
     .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:2.5rem}
     .price-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2.5rem 1.8rem;display:flex;flex-direction:column;position:relative}
     .price-card.featured{border-color:var(--green);box-shadow:var(--sh);background:#FFF}
@@ -111,7 +111,6 @@
     .price-list{list-style:none;margin-bottom:2rem;flex-grow:1}
     .price-list li{margin-bottom:.6rem;color:var(--muted);font-size:.95rem}
     
-    /* Formas de Pagamento */
     .payments-strip{margin-top:2.5rem;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;font-size:.95rem;color:var(--green)}
     .pay-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;background:var(--yellow-light);padding:.4rem .85rem;border-radius:8px;font-size:.85rem}
     
@@ -122,10 +121,146 @@
     .spot h3{font-size:1.25rem;margin:.5rem 0 .4rem}
     .spot p{font-size:.9rem;color:var(--muted)}
     
-    .event-box{background:var(--green);color:#fff;border-radius:24px;padding:3.5rem 2.5rem}
-    .event-box h2{color:#fff;font-size:clamp(2rem,3vw,2.6rem);margin-bottom:1rem}
-    .event-box p{color:#D5DFD9;margin-bottom:1.8rem;font-size:1.05rem}
+    /* ==========================================================================
+       NOVA SEÇÃO: EVENTOS (COMPLETA E RESPONSIVA)
+       ========================================================================== */
+    .events-section{background:#FFFFFF;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
     
+    .events-hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3.5rem;align-items:center;margin-bottom:4rem}
+    .events-hero-content h2{font-size:clamp(2.4rem,4vw,3.3rem);margin-bottom:1.2rem}
+    .events-hero-content p{font-size:1.15rem;color:var(--muted);margin-bottom:1.8rem;line-height:1.6}
+    
+    /* Cards de Pacotes de Eventos */
+    .event-packages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2rem;margin-top:2.5rem;align-items:stretch}
+    .event-pkg-card{
+      background:var(--bg);
+      border:1.5px solid var(--border);
+      border-radius:20px;
+      padding:2.5rem 2rem;
+      display:flex;
+      flex-direction:column;
+      position:relative;
+      transition:transform .2s ease,border-color .2s ease;
+    }
+    .event-pkg-card:hover{transform:translateY(-3px);border-color:var(--green)}
+    
+    /* Destaque sutil para Pacote Celebração */
+    .event-pkg-card.is-balanced{
+      border-color:var(--yellow);
+      background:#FFF;
+      box-shadow:var(--sh);
+    }
+    .balanced-tag{
+      position:absolute;
+      top:-13px;
+      left:50%;
+      transform:translateX(-50%);
+      background:var(--yellow);
+      color:var(--green);
+      padding:.3rem 1rem;
+      border-radius:99px;
+      font-size:.75rem;
+      font-family:'Fredoka',sans-serif;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+    }
+    
+    .pkg-title{font-size:1.55rem;margin-bottom:.4rem;color:var(--green)}
+    .pkg-photos{
+      font-family:'Fredoka',sans-serif;
+      font-size:2.2rem;
+      color:var(--green);
+      font-weight:700;
+      margin:1rem 0 .6rem;
+      line-height:1;
+    }
+    .pkg-photos span{font-size:.95rem;color:var(--muted);font-weight:500;font-family:'Plus Jakarta Sans'}
+    
+    .pkg-desc{font-size:.95rem;color:var(--muted);margin-bottom:1.4rem;line-height:1.55}
+    .pkg-ref{
+      background:#FFF;
+      border:1px dashed var(--border);
+      border-radius:12px;
+      padding:.9rem 1rem;
+      font-size:.85rem;
+      color:var(--green);
+      margin-bottom:1.8rem;
+      font-weight:500;
+    }
+    .event-pkg-card.is-balanced .pkg-ref{background:var(--yellow-light);border-color:rgba(245,176,20,0.5)}
+    
+    /* Caixa de Observações e Transparência */
+    .pkg-notes-box{
+      margin-top:2.5rem;
+      background:var(--bg);
+      border:1px solid var(--border);
+      border-left:4px solid var(--yellow);
+      border-radius:14px;
+      padding:1.4rem 1.8rem;
+      font-size:.9rem;
+      color:var(--muted);
+      line-height:1.6;
+    }
+    .pkg-notes-box strong{color:var(--green)}
+
+    /* Seção: O que está incluso */
+    .incluso-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
+    .incluso-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.8rem}
+    .incluso-icon{width:36px;height:36px;border-radius:50%;background:var(--yellow-light);color:var(--green);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-weight:700;font-family:'Fredoka'}
+    .incluso-card h4{font-size:1.15rem;margin-bottom:.4rem}
+    .incluso-card p{font-size:.88rem;color:var(--muted);line-height:1.5}
+
+    /* Como Funciona em Eventos */
+    .event-steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;margin-top:2.5rem}
+    
+    /* Formulário de Orçamento para WhatsApp */
+    .orcamento-box{
+      background:var(--green);
+      color:#fff;
+      border-radius:24px;
+      padding:4rem 3rem;
+      margin-top:4rem;
+      box-shadow:var(--pol);
+    }
+    .orcamento-header{max-width:680px;margin:0 auto 2.5rem auto;text-align:center}
+    .orcamento-header h3{color:#fff;font-size:clamp(2.1rem,3.5vw,2.8rem);margin-bottom:.8rem}
+    .orcamento-header p{color:#D5DFD9;font-size:1.05rem}
+    
+    .event-form{max-width:760px;margin:auto}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .form-group{display:flex;flex-direction:column;gap:.4rem}
+    .form-group.full{grid-column:span 2}
+    .form-label{font-family:'Fredoka',sans-serif;font-size:.9rem;color:#E7EFEA;font-weight:600}
+    
+    .form-control{
+      width:100%;
+      background:#FFF;
+      border:1.5px solid transparent;
+      border-radius:12px;
+      padding:.9rem 1.1rem;
+      font-family:'Plus Jakarta Sans',sans-serif;
+      font-size:.95rem;
+      color:var(--text);
+      outline:none;
+      transition:border-color .2s;
+    }
+    .form-control:focus{border-color:var(--yellow)}
+    textarea.form-control{resize:vertical;min-height:95px}
+    
+    .form-submit-btn{
+      width:100%;
+      margin-top:1.5rem;
+      background:var(--yellow);
+      color:var(--green);
+      font-size:1.1rem;
+      padding:1.1rem;
+    }
+    .form-submit-btn:hover{background:#e0a00f}
+    
+    .form-note{text-align:center;font-size:.82rem;color:#C1CFC7;margin-top:1rem}
+
+    /* FAQ e Contato */
     .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.5rem;margin-top:2.5rem}
     .faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:.9rem;overflow:hidden}
     .faq-btn{width:100%;padding:1.2rem;text-align:left;background:none;border:none;font-weight:700;font-size:1.05rem;font-family:'Fredoka',sans-serif;color:var(--green);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
@@ -133,9 +268,7 @@
     .faq-item.open .faq-ans{display:block}
     .contact-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.2rem;box-shadow:var(--sh)}
     
-    /* ==========================================================================
-       BOTÃO FLUTUANTE DO WHATSAPP (ENQUADRAMENTO ÓTICO PERFEITO)
-       ========================================================================== */
+    /* Botão Flutuante do WhatsApp */
     .wpp-float-wrap{
       position:fixed;
       bottom:calc(20px + env(safe-area-inset-bottom, 0px));
@@ -175,12 +308,10 @@
     .wpp-float:active{transform:scale(0.92)}
     .wpp-float:hover{transform:scale(1.08)}
     
-    /* Ícone Oficial Centralizado com Compensação Ótica */
     .wpp-float svg{
       width:32px;
       height:32px;
       fill:#FFFFFF;
-      /* O rabicho do balão puxa o centro visual para baixo/esquerda: compensamos 0.5px */
       transform:translate(0.5px, -0.5px);
       display:block;
     }
@@ -197,12 +328,14 @@
     }
     
     @media(max-width:960px){
-      .hero-grid{grid-template-columns:1fr;text-align:center;gap:2.5rem}
+      .hero-grid,.events-hero-grid{grid-template-columns:1fr;text-align:center;gap:2.5rem}
       .hero-btns{justify-content:center}
       .menu,.header-actions-btn{display:none}
       .mob-toggle{display:flex}
       .sec-pad{padding:3.8rem 0}
-      .event-box{padding:2.8rem 1.8rem}
+      .orcamento-box{padding:2.8rem 1.5rem}
+      .form-grid{grid-template-columns:1fr}
+      .form-group.full{grid-column:span 1}
       .wpp-tooltip{display:none}
       .brand-logo-text{font-size:1.9rem}
     }
@@ -253,7 +386,7 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero Geral (Avulso / Praças) -->
     <section id="inicio" class="hero">
       <div class="wrap hero-grid">
         <div>
@@ -262,6 +395,7 @@
           <p>A Fotta transforma encontros especiais em fotografias instantâneas para levar com você, guardar no bolso e reviver sempre que quiser.</p>
           <div class="hero-btns">
             <a href="#precos" class="btn btn-green">Quero minha Fotta</a>
+            <a href="#eventos" class="btn btn-yellow">Fotta para Eventos</a>
             <a href="#como-funciona" class="btn btn-sec">Como funciona</a>
           </div>
         </div>
@@ -274,7 +408,7 @@
       </div>
     </section>
 
-    <!-- Como Funciona -->
+    <!-- Como Funciona Geral -->
     <section id="como-funciona" class="sec-pad" style="background:#fff;border-top:1px solid var(--border)">
       <div class="wrap center">
         <span class="tag">Espontâneo</span>
@@ -299,7 +433,7 @@
       </div>
     </section>
 
-    <!-- Preços -->
+    <!-- Preços Avulsos -->
     <section id="precos" class="sec-pad" style="background:#F4F1E8">
       <div class="wrap center">
         <span class="tag">Tabela Comercial</span>
@@ -342,7 +476,7 @@
 
         <!-- Formas de Pagamento -->
         <div class="payments-strip">
-          <strong>Formas de Pagamento:</strong>
+          <strong>Formas de Pagamento aceitas:</strong>
           <span class="pay-badge">✓ Pix</span>
           <span class="pay-badge">✓ Dinheiro</span>
           <span class="pay-badge">✓ Débito</span>
@@ -380,14 +514,210 @@
       </div>
     </section>
 
-    <!-- Eventos -->
-    <section id="eventos" class="sec-pad">
+    <!-- ==========================================================================
+         NOVA SEÇÃO: EVENTOS (CONTRATAÇÃO, PACOTES & ORÇAMENTO)
+         ========================================================================== -->
+    <section id="eventos" class="sec-pad events-section">
       <div class="wrap">
-        <div class="event-box">
-          <h2>Lembrança física para o seu evento</h2>
-          <p>Aniversários, casamentos e confraternizações em Nova Friburgo. Seus convidados saem da festa com a foto física revelada na hora.</p>
-          <a href="https://wa.me/5522988166392?text=Olá!%20Gostaria%20de%20consultar%20disponibilidade%20da%20Fotta%20para%20meu%20evento." target="_blank" class="btn btn-yellow">Consultar disponibilidade</a>
+        
+        <!-- 1. Abertura da Seção de Eventos -->
+        <div class="events-hero-grid">
+          <div class="events-hero-content">
+            <span class="tag"><span class="tag-dot"></span> Eventos & Celebrações</span>
+            <h2>Seu evento merece sair da tela.</h2>
+            <p>Fotografias instantâneas para transformar momentos especiais em lembranças que você pode guardar, compartilhar e levar para casa.</p>
+            <p style="font-size:1rem;margin-top:-.8rem;margin-bottom:2rem">
+              Atendimento pensado para casamentos, aniversários, festas e celebrações particulares em Nova Friburgo e região serrana. Uma experiência interativa onde seus convidados acompanham a revelação na hora.
+            </p>
+            <a href="#orcamento-evento" class="btn btn-green">Solicitar orçamento</a>
+          </div>
+
+          <div style="display:flex;justify-content:center;">
+            <div class="pol-card" style="transform:rotate(2deg);max-width:320px;width:100%">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Celebrações Fotta">
+              <p>Lembrança física para convidados</p>
+            </div>
+          </div>
         </div>
+
+        <!-- 2. Seção de Pacotes -->
+        <div class="center" style="margin-top:2rem">
+          <span class="tag">Propostas de Atendimento</span>
+          <h2>Pacotes para Eventos</h2>
+          <p style="color:var(--muted);max-width:650px;margin:.5rem auto 0 auto;font-size:1.05rem">
+            Opções estruturadas para diferentes portes de celebração. Escolha uma referência inicial para prepararmos a melhor proposta.
+          </p>
+        </div>
+
+        <div class="event-packages-grid">
+          <!-- Pacote Essencial -->
+          <div class="event-pkg-card">
+            <h3 class="pkg-title">Pacote Essencial</h3>
+            <div class="pkg-photos">40+ <span>fotos instantâneas</span></div>
+            <p class="pkg-desc">Recomendado para comemorações intimistas, aniversários pequenos e encontros especiais. Ideal para registrar os momentos mais marcantes sem precisar de uma grande quantidade de fotos.</p>
+            <div class="pkg-ref">
+              <strong>Referência sugerida:</strong> Eventos com aproximadamente 15 a 30 convidados.
+            </div>
+            <button class="btn btn-sec select-pkg-btn" data-pkg="Essencial" style="margin-top:auto">Solicitar orçamento</button>
+          </div>
+
+          <!-- Pacote Celebração (Destaque sutil) -->
+          <div class="event-pkg-card is-balanced">
+            <div class="balanced-tag">Opção Equilibrada</div>
+            <h3 class="pkg-title">Pacote Celebração</h3>
+            <div class="pkg-photos">80+ <span>fotos instantâneas</span></div>
+            <p class="pkg-desc">Recomendado para aniversários maiores, confraternizações e festas com mais momentos acontecendo. Permite registrar mais convidados e ampliar a variedade de lembranças distribuídas.</p>
+            <div class="pkg-ref">
+              <strong>Referência sugerida:</strong> Eventos com aproximadamente 30 a 60 convidados.
+            </div>
+            <button class="btn btn-green select-pkg-btn" data-pkg="Celebração" style="margin-top:auto">Solicitar orçamento</button>
+          </div>
+
+          <!-- Pacote Memórias -->
+          <div class="event-pkg-card">
+            <h3 class="pkg-title">Pacote Memórias</h3>
+            <div class="pkg-photos">120+ <span>fotos instantâneas</span></div>
+            <p class="pkg-desc">Recomendado para casamentos, festas maiores e celebrações com muitos convidados. Ideal para registrar uma variedade maior de pessoas e momentos ao longo do evento.</p>
+            <div class="pkg-ref">
+              <strong>Referência sugerida:</strong> Eventos com aproximadamente 60 a 100 convidados.
+            </div>
+            <button class="btn btn-sec select-pkg-btn" data-pkg="Memórias" style="margin-top:auto">Solicitar orçamento</button>
+          </div>
+        </div>
+
+        <!-- Observações sobre as quantidades -->
+        <div class="pkg-notes-box">
+          <strong>Atenção ao planejamento:</strong> As quantidades são referências iniciais para estimativa, não garantias de uma foto para cada convidado ou fotos ilimitadas. A quantidade ideal varia conforme a duração do evento, o número real de presentes e a forma combinada de distribuição das fotos. Todos os valores e detalhes são combinados sob medida no orçamento.
+        </div>
+
+        <!-- 3. O que está incluso -->
+        <div style="margin-top:5rem">
+          <div class="center">
+            <span class="tag">Transparência</span>
+            <h2>O que está incluso no atendimento</h2>
+          </div>
+
+          <div class="incluso-grid">
+            <div class="incluso-card">
+              <div class="incluso-icon">✓</div>
+              <h4>Filme Instax Original</h4>
+              <p>Fotografias físicas impressas na hora em filme químico autêntico com as clássicas bordas brancas.</p>
+            </div>
+
+            <div class="incluso-card">
+              <div class="incluso-icon">✓</div>
+              <h4>Atendimento Personalizado</h4>
+              <p>Postura acolhedora e dinâmica alinhada ao estilo e perfil da sua celebração.</p>
+            </div>
+
+            <div class="incluso-card">
+              <div class="incluso-icon">✓</div>
+              <h4>Planejamento Prévio</h4>
+              <p>Definição conjunta da quantidade adequada de fotos e de como elas serão entregues aos convidados.</p>
+            </div>
+
+            <div class="incluso-card">
+              <div class="incluso-icon">✓</div>
+              <h4>Alinhamento Logístico</h4>
+              <p>Duração, horários de início e local combinados com antecedência junto ao contratante.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Como funciona em 3 etapas -->
+        <div style="margin-top:5rem">
+          <div class="center">
+            <span class="tag">Passo a Passo</span>
+            <h2>Como funciona a contratação</h2>
+          </div>
+
+          <div class="event-steps-grid">
+            <div class="step-box">
+              <div class="step-num">01</div>
+              <h3>Conte sobre seu evento</h3>
+              <p>Informe o tipo de celebração, a data prevista, a cidade e o número aproximado de convidados.</p>
+            </div>
+
+            <div class="step-box">
+              <div class="step-num">02</div>
+              <h3>Escolha a proposta ideal</h3>
+              <p>A Fotta avalia a quantidade de fotos e os detalhes necessários para preparar um orçamento adequado.</p>
+            </div>
+
+            <div class="step-box">
+              <div class="step-num">03</div>
+              <h3>Transforme em lembranças</h3>
+              <p>As fotos são produzidas durante o evento e entregues aos convidados conforme a dinâmica combinada.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Formulário de Orçamento (Integrado ao WhatsApp Oficial) -->
+        <div class="orcamento-box" id="orcamento-evento">
+          <div class="orcamento-header">
+            <span class="tag" style="background:rgba(245,176,20,0.2);color:var(--yellow)">Vamos conversar?</span>
+            <h3>Vamos fazer parte desse momento?</h3>
+            <p>Conte um pouco sobre o seu evento e vamos encontrar a melhor proposta para transformar esses momentos em fotografias instantâneas.</p>
+          </div>
+
+          <form class="event-form" id="form-evento">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="ev-nome">Seu Nome *</label>
+                <input type="text" id="ev-nome" class="form-control" placeholder="Como podemos te chamar?" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ev-tipo">Tipo de Evento *</label>
+                <select id="ev-tipo" class="form-control" required>
+                  <option value="" disabled selected>Selecione uma opção</option>
+                  <option value="Casamento">Casamento / Mini Wedding</option>
+                  <option value="Aniversário">Aniversário / 15 Anos</option>
+                  <option value="Confraternização">Confraternização / Festa</option>
+                  <option value="Outro">Outro tipo de celebração</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ev-data">Data Prevista *</label>
+                <input type="text" id="ev-data" class="form-control" placeholder="Ex: 14/11/2026" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ev-local">Cidade e Local (se já definidos)</label>
+                <input type="text" id="ev-local" class="form-control" placeholder="Ex: Nova Friburgo — Espaço...">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ev-convidados">Aprox. de Convidados</label>
+                <input type="text" id="ev-convidados" class="form-control" placeholder="Ex: Cerca de 40 pessoas">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="ev-pacote">Pacote de Interesse</label>
+                <select id="ev-pacote" class="form-control">
+                  <option value="Ainda não sei">Ainda não sei (quero orientação)</option>
+                  <option value="Essencial (40+ fotos)">Pacote Essencial (40+ fotos)</option>
+                  <option value="Celebração (80+ fotos)">Pacote Celebração (80+ fotos)</option>
+                  <option value="Memórias (120+ fotos)">Pacote Memórias (120+ fotos)</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label class="form-label" for="ev-obs">Observações (opcional)</label>
+                <textarea id="ev-obs" class="form-control" placeholder="Conte mais detalhes: horários, estilo da festa ou dúvidas..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-yellow form-submit-btn">
+              Solicitar proposta via WhatsApp
+            </button>
+            <p class="form-note">
+              * O preenchimento enviará os detalhes diretamente para o nosso WhatsApp oficial para montarmos sua proposta.
+            </p>
+          </form>
+        </div>
+
       </div>
     </section>
 
@@ -406,6 +736,10 @@
               <button class="faq-btn">Quanto tempo demora para revelar? <span>↓</span></button>
               <div class="faq-ans">A foto começa a aparecer em segundos e atinge cores plenas em cerca de 2 minutos.</div>
             </div>
+            <div class="faq-item">
+              <button class="faq-btn">Como funciona o envio do formulário? <span>↓</span></button>
+              <div class="faq-ans">Os dados preenchidos abrem uma conversa organizada no WhatsApp da Fotta com as informações do seu evento para agilizar o atendimento.</div>
+            </div>
           </div>
         </div>
         <div class="contact-card">
@@ -419,13 +753,10 @@
     </section>
   </main>
 
-  <!-- ==========================================================================
-       BOTÃO FLUTUANTE DO WHATSAPP (OFICIAL & COMPENSADO OTICAMENTE)
-       ========================================================================== -->
+  <!-- Botão Flutuante do WhatsApp Oficial -->
   <div class="wpp-float-wrap">
     <div class="wpp-tooltip">Pedir minha Fotta</div>
     <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="wpp-float" aria-label="Falar no WhatsApp">
-      <!-- Vetor Oficial FontAwesome com Enquadramento Centralizado Perfeito -->
       <svg viewBox="0 0 448 512">
         <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
       </svg>
@@ -448,16 +779,68 @@
   </footer>
 
   <script>
+    // FAQ Accordion
     document.querySelectorAll('.faq-btn').forEach(b => {
       b.onclick = () => b.parentElement.classList.toggle('open');
     });
 
+    // Menu Mobile Drawer
     const mobBtn = document.getElementById('mob-btn');
     const mobDrawer = document.getElementById('mob-drawer');
     if (mobBtn && mobDrawer) {
       mobBtn.onclick = () => mobDrawer.classList.toggle('open');
       document.querySelectorAll('.mob-link').forEach(link => {
         link.onclick = () => mobDrawer.classList.remove('open');
+      });
+    }
+
+    // Clique nos botões dos pacotes: seleciona o pacote no formulário e rola suavemente
+    document.querySelectorAll('.select-pkg-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const pkgName = btn.getAttribute('data-pkg');
+        const select = document.getElementById('ev-pacote');
+        if (select) {
+          for (let i = 0; i < select.options.length; i++) {
+            if (select.options[i].text.includes(pkgName)) {
+              select.selectedIndex = i;
+              break;
+            }
+          }
+        }
+        const target = document.getElementById('orcamento-evento');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Envio do Formulário de Orçamento para o WhatsApp
+    const formEvento = document.getElementById('form-evento');
+    if (formEvento) {
+      formEvento.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const nome = document.getElementById('ev-nome').value.trim();
+        const tipo = document.getElementById('ev-tipo').value;
+        const data = document.getElementById('ev-data').value.trim();
+        const local = document.getElementById('ev-local').value.trim() || 'A definir';
+        const convidados = document.getElementById('ev-convidados').value.trim() || 'A definir';
+        const pacote = document.getElementById('ev-pacote').value;
+        const obs = document.getElementById('ev-obs').value.trim();
+
+        let msg = `Olá, Fotta! Gostaria de consultar um orçamento para evento:\n\n`;
+        msg += `• *Nome:* ${nome}\n`;
+        msg += `• *Tipo de Evento:* ${tipo}\n`;
+        msg += `• *Data Prevista:* ${data}\n`;
+        msg += `• *Local/Cidade:* ${local}\n`;
+        msg += `• *Nº de Convidados:* ${convidados}\n`;
+        msg += `• *Pacote de Interesse:* ${pacote}\n`;
+        if (obs) {
+          msg += `• *Observações:* ${obs}\n`;
+        }
+
+        const url = `https://wa.me/5522988166392?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
       });
     }
   </script>
