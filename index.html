@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>fotta. — um instante, para sempre | Fotografia Instantânea</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23FAF8F2' stroke='%23F5B014' stroke-width='2'/%3E%3Crect x='15' y='16' width='18' height='16' rx='4' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23F5B014'/%3E%3C/svg%3E">
+  
+  <!-- SEO & Prévia para WhatsApp, Instagram e Redes Sociais (Open Graph) -->
+  <meta name="description" content="A Fotta transforma encontros especiais em fotografias instantâneas físicas em Nova Friburgo - RJ. Praça do Suspiro, Espaço ARP, Country Club e eventos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fottaoficial.github.io/fotta/">
+  <meta property="og:title" content="fotta. — um instante, para sempre">
+  <meta property="og:description" content="Fotografias instantâneas físicas em Nova Friburgo - RJ. Momentos reais que merecem sair da tela.">
+  <meta property="og:image" content="https://fottaoficial.github.io/fotta/logo.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://fottaoficial.github.io/fotta/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     :root{--bg:#FAF8F2;--card:#FFF;--green:#1E3A2B;--green-h:#14271D;--yellow:#F5B014;--yellow-light:#FEF7E6;--text:#1D211E;--muted:#636B65;--border:#E8E4D8;--sh:0 10px 25px rgba(30,58,43,0.06);--pol:0 14px 32px rgba(30,58,43,0.12)}
     *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -33,19 +48,9 @@
     header{position:sticky;top:0;background:rgba(250,248,242,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:90}
     .nav-box{display:flex;justify-content:space-between;align-items:center;height:74px}
     
-    /* Logo Oficial */
-    .brand-svg{display:inline-flex;align-items:center;gap:3px;text-decoration:none}
-    .brand-svg span.f-text{font-family:'Fredoka',sans-serif;font-weight:700;font-size:2.3rem;color:var(--green);letter-spacing:-0.03em;line-height:1}
-    .camera-icon{position:relative;width:32px;height:32px;background:#F0EEE8;border:2px solid var(--green);border-radius:9px;display:inline-flex;align-items:center;justify-content:center;margin:0 2px}
-    .camera-lens{width:15px;height:15px;border-radius:50%;background:#1D211E;border:2px solid #333C36;display:flex;align-items:center;justify-content:center}
-    .camera-lens::after{content:'';width:3.5px;height:3.5px;border-radius:50%;background:#fff;opacity:0.85}
-    .camera-viewfinder{position:absolute;top:3px;right:3px;width:4px;height:4px;background:#1D211E;border-radius:1px}
-    .camera-rays{position:absolute;top:-8px;right:-7px;display:flex;gap:2px}
-    .camera-rays span{width:3px;height:7px;background:var(--yellow);border-radius:2px;display:inline-block}
-    .camera-rays span:nth-child(1){transform:rotate(-30deg);height:5px}
-    .camera-rays span:nth-child(2){transform:rotate(10deg);margin-top:-2px}
-    .camera-rays span:nth-child(3){transform:rotate(40deg);height:6px}
-    .yellow-dot{display:inline-block;width:9px;height:9px;background:var(--yellow);border-radius:50%;margin-left:2px}
+    /* Logo Oficial Carregada em Imagem */
+    .brand-logo-link{display:inline-flex;align-items:center;text-decoration:none}
+    .brand-logo-img{height:52px;width:auto;max-width:160px;object-fit:contain;border-radius:50%}
 
     .menu{display:flex;gap:1.6rem;list-style:none}
     .menu a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem;transition:color .2s}
@@ -53,7 +58,7 @@
     
     /* Botão Hambúrguer Mobile */
     .mob-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
-    .mob-toggle span{width:24px;height:2.5px;background:var(--green);border-radius:2px;transition:.3s}
+    .mob-toggle span{width:24px;height:2.5px;background:var(--green);border-radius:2px}
     .mob-drawer{display:none;position:fixed;top:74px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:1.5rem;box-shadow:0 12px 25px rgba(0,0,0,.08);z-index:89}
     .mob-drawer.open{display:block}
     .mob-drawer ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
@@ -108,9 +113,7 @@
     .faq-item.open .faq-ans{display:block}
     .contact-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.2rem;box-shadow:var(--sh)}
     
-    /* ==========================================================================
-       BOTÃO FLUTUANTE DO WHATSAPP (CORRIGIDO E APERFEIÇOADO)
-       ========================================================================== */
+    /* Botão Flutuante do WhatsApp */
     .wpp-float-wrap{
       position:fixed;
       bottom:calc(20px + env(safe-area-inset-bottom, 0px));
@@ -132,7 +135,6 @@
       box-shadow:0 4px 15px rgba(0,0,0,.1);
       border:1px solid var(--border);
       pointer-events:none;
-      animation:floatFade 3s ease infinite;
     }
 
     .wpp-float{
@@ -145,7 +147,7 @@
       justify-content:center;
       box-shadow:0 8px 24px rgba(37,211,102,.45), 0 2px 6px rgba(0,0,0,.12);
       text-decoration:none;
-      transition:transform .2s ease,box-shadow .2s ease;
+      transition:transform .2s ease;
       position:relative;
     }
     
@@ -170,12 +172,6 @@
       fill:#FFFFFF;
     }
 
-    @keyframes floatFade{
-      0%,100%{transform:translateY(0)}
-      50%{transform:translateY(-3px)}
-    }
-    
-    /* Responsividade Celular e Tablet */
     @media(max-width:960px){
       .hero-grid{grid-template-columns:1fr;text-align:center;gap:2.5rem}
       .hero-btns{justify-content:center}
@@ -183,7 +179,7 @@
       .mob-toggle{display:flex}
       .sec-pad{padding:3.8rem 0}
       .event-box{padding:2.8rem 1.8rem}
-      .wpp-tooltip{display:none} /* Oculta o balão de texto em telas pequenas para não cobrir conteúdo */
+      .wpp-tooltip{display:none}
     }
   </style>
 </head>
@@ -192,16 +188,9 @@
   <!-- Header -->
   <header>
     <div class="wrap nav-box">
-      <!-- Logo Oficial -->
-      <a href="#inicio" class="brand-svg">
-        <span class="f-text">f</span>
-        <div class="camera-icon">
-          <div class="camera-rays"><span></span><span></span><span></span></div>
-          <div class="camera-viewfinder"></div>
-          <div class="camera-lens"></div>
-        </div>
-        <span class="f-text">tta</span>
-        <span class="yellow-dot"></span>
+      <!-- Imagem Real da Logo Fotta -->
+      <a href="#inicio" class="brand-logo-link">
+        <img src="./logo.png" alt="fotta. — um instante, para sempre" class="brand-logo-img" onerror="this.onerror=null;this.src='./logo.jpg'">
       </a>
 
       <!-- Menu Desktop -->
@@ -404,9 +393,7 @@
     </section>
   </main>
 
-  <!-- ==========================================================================
-       BOTÃO FLUTUANTE DO WHATSAPP (CORRIGIDO: ÍCONE OFICIAL BRANCO + NÍTIDO)
-       ========================================================================== -->
+  <!-- Botão Flutuante do WhatsApp Oficial -->
   <div class="wpp-float-wrap">
     <div class="wpp-tooltip">Pedir minha Fotta</div>
     <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="wpp-float" aria-label="Falar no WhatsApp">
@@ -419,14 +406,9 @@
   <!-- Rodapé -->
   <footer style="background:#fff;border-top:1px solid var(--border);padding:3rem 0;text-align:center;color:var(--muted);font-size:.9rem">
     <div class="wrap">
-      <div style="margin-bottom:0.6rem">
-        <a href="#inicio" class="brand-svg">
-          <span class="f-text" style="font-size:2rem">f</span>
-          <div class="camera-icon" style="width:28px;height:28px">
-            <div class="camera-lens" style="width:13px;height:13px"></div>
-          </div>
-          <span class="f-text" style="font-size:2rem">tta</span>
-          <span class="yellow-dot" style="width:7px;height:7px"></span>
+      <div style="margin-bottom:0.8rem">
+        <a href="#inicio" class="brand-logo-link">
+          <img src="./logo.png" alt="fotta." style="height:44px;border-radius:50%" onerror="this.onerror=null;this.src='./logo.jpg'">
         </a>
       </div>
       <p style="font-weight:600;color:var(--green);font-size:1rem;margin-bottom:.4rem">"um instante, para sempre."</p>
@@ -435,12 +417,10 @@
   </footer>
 
   <script>
-    // FAQ Accordion
     document.querySelectorAll('.faq-btn').forEach(b => {
       b.onclick = () => b.parentElement.classList.toggle('open');
     });
 
-    // Menu Mobile Drawer
     const mobBtn = document.getElementById('mob-btn');
     const mobDrawer = document.getElementById('mob-drawer');
     if (mobBtn && mobDrawer) {
