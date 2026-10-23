@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>fotta. — um instante, para sempre | Fotografia Instantânea</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23FAF8F2' stroke='%23F5B014' stroke-width='2'/%3E%3Crect x='15' y='16' width='18' height='16' rx='4' fill='%231E3A2B'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23F5B014'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,65 +10,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root{--bg:#FAF8F2;--card:#FFF;--green:#1E3A2B;--green-h:#14271D;--yellow:#F5B014;--yellow-light:#FEF7E6;--text:#1D211E;--muted:#636B65;--border:#E8E4D8;--sh:0 10px 25px rgba(30,58,43,0.06);--pol:0 14px 32px rgba(30,58,43,0.12)}
-    *{box-sizing:border-box;margin:0;padding:0}
+    *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6}
+    body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;line-height:1.6;overflow-x:hidden}
     h1,h2,h3{font-family:'Fredoka',sans-serif;color:var(--green);line-height:1.2;font-weight:700}
     .wrap{max-width:1120px;margin:auto;padding:0 1.5rem}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.8rem;border-radius:99px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:.2s}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.8rem;border-radius:99px;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:transform .15s ease,background .2s ease}
+    .btn:active{transform:scale(0.97)}
     .btn-green{background:var(--green);color:#fff}
-    .btn-green:hover{background:var(--green-h);transform:translateY(-2px)}
+    .btn-green:hover{background:var(--green-h)}
     .btn-yellow{background:var(--yellow);color:var(--green)}
-    .btn-yellow:hover{background:#e0a00f;transform:translateY(-2px)}
+    .btn-yellow:hover{background:#e0a00f}
     .btn-sec{background:#fff;color:var(--green);border:1.5px solid var(--border)}
-    .btn-sec:hover{border-color:var(--green);transform:translateY(-2px)}
-    .btn-wpp{background:#25D366;color:#1E3A2B;font-weight:700}
-    .btn-wpp:hover{background:#20bd5a;transform:translateY(-2px)}
-    .tag{display:inline-block;padding:.35rem .9rem;border-radius:99px;font-size:.78rem;font-family:'Fredoka',sans-serif;font-weight:600;text-transform:uppercase;background:#E7EFEA;color:var(--green);margin-bottom:.8rem}
-    .sec-pad{padding:5rem 0}
+    .btn-sec:hover{border-color:var(--green)}
+    .btn-wpp{background:#25D366;color:#fff;font-weight:700;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+    .tag{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .9rem;border-radius:99px;font-size:.78rem;font-family:'Fredoka',sans-serif;font-weight:600;text-transform:uppercase;background:#E7EFEA;color:var(--green);margin-bottom:.8rem}
+    .tag-dot{width:7px;height:7px;border-radius:50%;background:var(--yellow)}
+    .sec-pad{padding:4.5rem 0}
     .center{text-align:center}
     
-    /* Header */
-    header{position:sticky;top:0;background:rgba(250,248,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:90}
-    .nav-box{display:flex;justify-content:space-between;align-items:center;height:76px}
+    /* Header & Navegação */
+    header{position:sticky;top:0;background:rgba(250,248,242,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);z-index:90}
+    .nav-box{display:flex;justify-content:space-between;align-items:center;height:74px}
     
-    /* Logo da Marca Estilo Oficial */
-    .brand-svg{display:inline-flex;align-items:center;gap:3px;text-decoration:none;cursor:pointer}
-    .brand-svg span.f-text{font-family:'Fredoka',sans-serif;font-weight:700;font-size:2.4rem;color:var(--green);letter-spacing:-0.03em;line-height:1}
-    .camera-icon{position:relative;width:34px;height:34px;background:#F0EEE8;border:2px solid var(--green);border-radius:9px;display:inline-flex;align-items:center;justify-content:center;margin:0 2px;box-shadow:inset 0 1px 2px rgba(0,0,0,0.06)}
-    .camera-lens{width:16px;height:16px;border-radius:50%;background:#1D211E;border:2.5px solid #333C36;display:flex;align-items:center;justify-content:center}
-    .camera-lens::after{content:'';width:4px;height:4px;border-radius:50%;background:#fff;opacity:0.8}
+    /* Logo Oficial */
+    .brand-svg{display:inline-flex;align-items:center;gap:3px;text-decoration:none}
+    .brand-svg span.f-text{font-family:'Fredoka',sans-serif;font-weight:700;font-size:2.3rem;color:var(--green);letter-spacing:-0.03em;line-height:1}
+    .camera-icon{position:relative;width:32px;height:32px;background:#F0EEE8;border:2px solid var(--green);border-radius:9px;display:inline-flex;align-items:center;justify-content:center;margin:0 2px}
+    .camera-lens{width:15px;height:15px;border-radius:50%;background:#1D211E;border:2px solid #333C36;display:flex;align-items:center;justify-content:center}
+    .camera-lens::after{content:'';width:3.5px;height:3.5px;border-radius:50%;background:#fff;opacity:0.85}
     .camera-viewfinder{position:absolute;top:3px;right:3px;width:4px;height:4px;background:#1D211E;border-radius:1px}
     .camera-rays{position:absolute;top:-8px;right:-7px;display:flex;gap:2px}
     .camera-rays span{width:3px;height:7px;background:var(--yellow);border-radius:2px;display:inline-block}
     .camera-rays span:nth-child(1){transform:rotate(-30deg);height:5px}
     .camera-rays span:nth-child(2){transform:rotate(10deg);margin-top:-2px}
     .camera-rays span:nth-child(3){transform:rotate(40deg);height:6px}
-    .yellow-dot{display:inline-block;width:9px;height:9px;background:var(--yellow);border-radius:50%;margin-left:2px;vertical-align:baseline}
+    .yellow-dot{display:inline-block;width:9px;height:9px;background:var(--yellow);border-radius:50%;margin-left:2px}
 
     .menu{display:flex;gap:1.6rem;list-style:none}
-    .menu a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem}
+    .menu a{text-decoration:none;color:var(--muted);font-weight:600;font-size:.95rem;transition:color .2s}
     .menu a:hover{color:var(--green)}
     
+    /* Botão Hambúrguer Mobile */
+    .mob-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
+    .mob-toggle span{width:24px;height:2.5px;background:var(--green);border-radius:2px;transition:.3s}
+    .mob-drawer{display:none;position:fixed;top:74px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--border);padding:1.5rem;box-shadow:0 12px 25px rgba(0,0,0,.08);z-index:89}
+    .mob-drawer.open{display:block}
+    .mob-drawer ul{list-style:none;display:flex;flex-direction:column;gap:1.2rem}
+    .mob-drawer a{text-decoration:none;font-family:'Fredoka',sans-serif;font-size:1.15rem;color:var(--green);font-weight:600}
+
     /* Hero */
-    .hero{padding:4rem 0 4.5rem}
+    .hero{padding:3.5rem 0 4rem}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
-    .hero h1{font-size:clamp(2.4rem,4.2vw,3.6rem);margin-bottom:1.2rem}
+    .hero h1{font-size:clamp(2.3rem,4.2vw,3.6rem);margin-bottom:1.2rem}
     .hero h1 span{background:linear-gradient(180deg,transparent 65%,rgba(245,176,20,.35) 65%)}
     .hero p{font-size:1.15rem;color:var(--muted);margin-bottom:1.8rem}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
     
     /* Polaroid */
-    .pol-card{background:#fff;padding:14px 14px 42px;border:1px solid #ECEAE3;border-radius:4px;box-shadow:var(--pol);position:relative}
+    .pol-card{background:#fff;padding:14px 14px 42px;border:1px solid #ECEAE3;border-radius:4px;box-shadow:var(--pol);position:relative;transition:transform .3s ease}
     .pol-card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:2px}
     .pol-card p{margin-top:14px;text-align:center;font-family:'Fredoka',sans-serif;font-weight:600;font-size:1rem;color:var(--green)}
     
-    /* Grids Responsivos para Tablet e Celular */
-    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:3rem}
+    /* Grids */
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.6rem;margin-top:2.5rem}
     .step-box{background:#fff;border:1px solid var(--border);border-radius:16px;padding:2.2rem 1.8rem}
     .step-num{font-size:2.4rem;font-weight:700;color:rgba(30,58,43,.15);margin-bottom:.5rem;font-family:'Fredoka'}
     
-    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem}
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem;margin-top:2.5rem}
     .price-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:2.5rem 1.8rem;display:flex;flex-direction:column;position:relative}
     .price-card.featured{border-color:var(--green);box-shadow:var(--sh);background:#FFF}
     .feat-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--green);padding:.3rem .9rem;border-radius:99px;font-size:.75rem;font-family:'Fredoka',sans-serif;font-weight:700;text-transform:uppercase}
@@ -77,38 +86,104 @@
     .price-list{list-style:none;margin-bottom:2rem;flex-grow:1}
     .price-list li{margin-bottom:.6rem;color:var(--muted);font-size:.95rem}
     
-    /* Faixa de Pagamentos */
-    .payments-strip{margin-top:2.5rem;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-size:.95rem;color:var(--green)}
-    .pay-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;background:var(--yellow-light);padding:.35rem .75rem;border-radius:8px;font-size:.85rem}
+    /* Formas de Pagamento */
+    .payments-strip{margin-top:2.5rem;background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.4rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;font-size:.95rem;color:var(--green)}
+    .pay-badge{display:inline-flex;align-items:center;gap:.4rem;font-weight:600;background:var(--yellow-light);padding:.4rem .85rem;border-radius:8px;font-size:.85rem}
     
-    .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem}
+    .gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2.5rem}
     
-    .spots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
+    .spots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem}
     .spot{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.8rem}
     .spot h3{font-size:1.25rem;margin:.5rem 0 .4rem}
     .spot p{font-size:.9rem;color:var(--muted)}
     
-    .event-box{background:var(--green);color:#fff;border-radius:24px;padding:4rem 3rem}
+    .event-box{background:var(--green);color:#fff;border-radius:24px;padding:3.5rem 2.5rem}
     .event-box h2{color:#fff;font-size:clamp(2rem,3vw,2.6rem);margin-bottom:1rem}
     .event-box p{color:#D5DFD9;margin-bottom:1.8rem;font-size:1.05rem}
     
-    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:3rem;margin-top:3rem}
+    .faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.5rem;margin-top:2.5rem}
     .faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:.9rem;overflow:hidden}
     .faq-btn{width:100%;padding:1.2rem;text-align:left;background:none;border:none;font-weight:700;font-size:1.05rem;font-family:'Fredoka',sans-serif;color:var(--green);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
     .faq-ans{display:none;padding:0 1.2rem 1.2rem;font-size:.95rem;color:var(--muted);line-height:1.6}
     .faq-item.open .faq-ans{display:block}
-    .contact-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.5rem;box-shadow:var(--sh)}
+    .contact-card{background:#fff;border:1px solid var(--border);border-radius:20px;padding:2.2rem;box-shadow:var(--sh)}
     
-    /* Botão Flutuante do WhatsApp */
-    .wpp-float{position:fixed;bottom:24px;right:24px;background:#25D366;color:#1E3A2B;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:95;cursor:pointer;transition:.25s;text-decoration:none}
-    .wpp-float:hover{transform:scale(1.1)}
+    /* ==========================================================================
+       BOTÃO FLUTUANTE DO WHATSAPP (CORRIGIDO E APERFEIÇOADO)
+       ========================================================================== */
+    .wpp-float-wrap{
+      position:fixed;
+      bottom:calc(20px + env(safe-area-inset-bottom, 0px));
+      right:20px;
+      z-index:999;
+      display:flex;
+      align-items:center;
+      gap:.6rem;
+    }
     
+    .wpp-tooltip{
+      background:#fff;
+      color:var(--green);
+      padding:.45rem .85rem;
+      border-radius:99px;
+      font-size:.8rem;
+      font-family:'Fredoka',sans-serif;
+      font-weight:600;
+      box-shadow:0 4px 15px rgba(0,0,0,.1);
+      border:1px solid var(--border);
+      pointer-events:none;
+      animation:floatFade 3s ease infinite;
+    }
+
+    .wpp-float{
+      width:60px;
+      height:60px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 24px rgba(37,211,102,.45), 0 2px 6px rgba(0,0,0,.12);
+      text-decoration:none;
+      transition:transform .2s ease,box-shadow .2s ease;
+      position:relative;
+    }
+    
+    .wpp-float::after{
+      content:'';
+      position:absolute;
+      top:2px;
+      right:2px;
+      width:14px;
+      height:14px;
+      background:#2D6A4F;
+      border:2.5px solid #fff;
+      border-radius:50%;
+    }
+
+    .wpp-float:active{transform:scale(0.92)}
+    .wpp-float:hover{transform:scale(1.08)}
+    
+    .wpp-float svg{
+      width:32px;
+      height:32px;
+      fill:#FFFFFF;
+    }
+
+    @keyframes floatFade{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-3px)}
+    }
+    
+    /* Responsividade Celular e Tablet */
     @media(max-width:960px){
       .hero-grid{grid-template-columns:1fr;text-align:center;gap:2.5rem}
       .hero-btns{justify-content:center}
-      .menu{display:none}
-      .sec-pad{padding:4rem 0}
-      .event-box{padding:3rem 2rem}
+      .menu,.header-actions-btn{display:none}
+      .mob-toggle{display:flex}
+      .sec-pad{padding:3.8rem 0}
+      .event-box{padding:2.8rem 1.8rem}
+      .wpp-tooltip{display:none} /* Oculta o balão de texto em telas pequenas para não cobrir conteúdo */
     }
   </style>
 </head>
@@ -117,7 +192,7 @@
   <!-- Header -->
   <header>
     <div class="wrap nav-box">
-      <!-- Logo Oficial Fotta -->
+      <!-- Logo Oficial -->
       <a href="#inicio" class="brand-svg">
         <span class="f-text">f</span>
         <div class="camera-icon">
@@ -129,6 +204,7 @@
         <span class="yellow-dot"></span>
       </a>
 
+      <!-- Menu Desktop -->
       <ul class="menu">
         <li><a href="#como-funciona">Como Funciona</a></li>
         <li><a href="#precos">Preços</a></li>
@@ -136,7 +212,28 @@
         <li><a href="#onde-encontrar">Onde Encontrar</a></li>
         <li><a href="#eventos">Eventos</a></li>
       </ul>
-      <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="btn btn-wpp">WhatsApp</a>
+
+      <!-- Ação Direta Header -->
+      <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="btn btn-wpp header-actions-btn">WhatsApp</a>
+
+      <!-- Botão Hambúrguer Mobile -->
+      <button class="mob-toggle" id="mob-btn" aria-label="Abrir Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Gaveta de Menu Mobile -->
+    <div class="mob-drawer" id="mob-drawer">
+      <ul>
+        <li><a href="#como-funciona" class="mob-link">Como Funciona</a></li>
+        <li><a href="#precos" class="mob-link">Preços</a></li>
+        <li><a href="#galeria" class="mob-link">Galeria</a></li>
+        <li><a href="#onde-encontrar" class="mob-link">Onde Encontrar</a></li>
+        <li><a href="#eventos" class="mob-link">Eventos</a></li>
+        <li>
+          <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="btn btn-wpp" style="width:100%;margin-top:.5rem">Chamar no WhatsApp</a>
+        </li>
+      </ul>
     </div>
   </header>
 
@@ -145,7 +242,7 @@
     <section id="inicio" class="hero">
       <div class="wrap hero-grid">
         <div>
-          <span class="tag">Nova Friburgo — RJ</span>
+          <span class="tag"><span class="tag-dot"></span> Nova Friburgo — RJ</span>
           <h1>Tem momentos que merecem <span>sair da tela.</span></h1>
           <p>A Fotta transforma encontros especiais em fotografias instantâneas para levar com você, guardar no bolso e reviver sempre que quiser.</p>
           <div class="hero-btns">
@@ -230,11 +327,11 @@
 
         <!-- Formas de Pagamento -->
         <div class="payments-strip">
-          <strong>Formas de Pagamento aceitas:</strong>
+          <strong>Formas de Pagamento:</strong>
           <span class="pay-badge">✓ Pix</span>
           <span class="pay-badge">✓ Dinheiro</span>
-          <span class="pay-badge">✓ Cartão de Débito</span>
-          <span class="pay-badge">✓ Cartão de Crédito</span>
+          <span class="pay-badge">✓ Débito</span>
+          <span class="pay-badge">✓ Crédito</span>
         </div>
       </div>
     </section>
@@ -307,12 +404,17 @@
     </section>
   </main>
 
-  <!-- Botão Flutuante WhatsApp Oficial -->
-  <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="wpp-float" aria-label="Falar no WhatsApp">
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.586 1.761.889 2.796.889 3.182 0 5.768-2.587 5.768-5.766.001-3.182-2.585-5.776-5.768-5.776zm0 13.082c-1.127 0-2.228-.31-3.189-.899l-3.535.927.943-3.447c-.649-.993-.993-2.148-.992-3.329 0-3.473 2.824-6.297 6.298-6.297 3.475 0 6.3 2.824 6.3 6.297 0 3.474-2.825 6.298-6.3 6.298zm-6.239-16.254c-1.848 1.846-2.866 4.301-2.867 6.915-.002 2.378.85 4.673 2.404 6.471l-1.571 5.74 5.874-1.54c1.726 1.472 3.918 2.278 6.183 2.278 2.616 0 5.072-1.017 6.919-2.864 1.846-1.847 2.864-4.304 2.864-6.92 0-2.616-1.018-5.072-2.865-6.92-1.847-1.846-4.303-2.865-6.92-2.865-2.616 0-5.073 1.019-6.92 2.865z"/>
-    </svg>
-  </a>
+  <!-- ==========================================================================
+       BOTÃO FLUTUANTE DO WHATSAPP (CORRIGIDO: ÍCONE OFICIAL BRANCO + NÍTIDO)
+       ========================================================================== -->
+  <div class="wpp-float-wrap">
+    <div class="wpp-tooltip">Pedir minha Fotta</div>
+    <a href="https://wa.me/5522988166392?text=Olá!%20Conheci%20a%20Fotta%20pelo%20site." target="_blank" class="wpp-float" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24">
+        <path d="M17.507 14.307l-.009.075c-.239-.12-1.411-.696-1.63-.776-.219-.08-.378-.12-.538.12-.16.239-.618.776-.757.935-.14.16-.279.18-.518.06-.24-.12-1.011-.373-1.926-1.189-.713-.635-1.194-1.42-1.334-1.66-.14-.24-.015-.369.105-.489.108-.107.24-.279.359-.418.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.538-1.296-.738-1.775-.195-.467-.393-.404-.539-.411l-.46-.008c-.16 0-.418.06-.638.3-.219.239-.837.817-.837 1.992s.856 2.311.976 2.471c.12.16 1.684 2.571 4.08 3.605.57.246 1.015.393 1.363.504.573.183 1.095.157 1.507.096.46-.069 1.411-.577 1.611-1.134.2-.557.2-1.036.14-1.135-.06-.1-.22-.16-.46-.28zm-5.467 7.42c-1.89 0-3.642-.511-5.163-1.401l-.37-.22-3.834 1.006 1.023-3.738-.242-.385c-.974-1.55-1.488-3.344-1.488-5.187 0-5.358 4.36-9.718 9.72-9.718 2.596 0 5.038 1.011 6.874 2.848 1.836 1.837 2.847 4.28 2.847 6.878 0 5.36-4.361 9.717-9.717 9.717zm8.283-17.999c-2.213-2.214-5.156-3.434-8.283-3.434-6.452 0-11.701 5.249-11.701 11.702 0 2.062.538 4.078 1.56 5.852l-1.657 6.053 6.194-1.625c1.709.932 3.637 1.423 5.604 1.423h.005c6.451 0 11.7-5.249 11.7-11.702 0-3.127-1.221-6.071-3.422-8.269z"/>
+      </svg>
+    </a>
+  </div>
 
   <!-- Rodapé -->
   <footer style="background:#fff;border-top:1px solid var(--border);padding:3rem 0;text-align:center;color:var(--muted);font-size:.9rem">
@@ -321,7 +423,7 @@
         <a href="#inicio" class="brand-svg">
           <span class="f-text" style="font-size:2rem">f</span>
           <div class="camera-icon" style="width:28px;height:28px">
-            <div class="camera-lens" style="width:14px;height:14px"></div>
+            <div class="camera-lens" style="width:13px;height:13px"></div>
           </div>
           <span class="f-text" style="font-size:2rem">tta</span>
           <span class="yellow-dot" style="width:7px;height:7px"></span>
@@ -333,9 +435,20 @@
   </footer>
 
   <script>
+    // FAQ Accordion
     document.querySelectorAll('.faq-btn').forEach(b => {
       b.onclick = () => b.parentElement.classList.toggle('open');
     });
+
+    // Menu Mobile Drawer
+    const mobBtn = document.getElementById('mob-btn');
+    const mobDrawer = document.getElementById('mob-drawer');
+    if (mobBtn && mobDrawer) {
+      mobBtn.onclick = () => mobDrawer.classList.toggle('open');
+      document.querySelectorAll('.mob-link').forEach(link => {
+        link.onclick = () => mobDrawer.classList.remove('open');
+      });
+    }
   </script>
 </body>
 </html>
